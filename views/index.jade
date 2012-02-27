@@ -1,0 +1,61 @@
+h1= title
+div#content
+div#map.mapBounds
+form(name="subscribeForm")
+  input(name="channel");
+  input(type="button", value="subscribe", onClick="socket.emit('sub',document.forms[0].channel.value)")
+
+script(type='text/javascript')
+  var map;
+  var markers = new Array();
+  var colors = [ '#f00', '#00f', '#0f0' ];
+
+  $(document).ready( function(){
+    var opts = {
+      center: new google.maps.LatLng(42.360202816455384,-71.08714687838953),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map( document.getElementById("map"), opts );
+  });
+
+  var socket = io.connect();
+  socket.on('info', function (data) {
+    $( '#content' ).html('info: ' + data);
+  });
+
+  socket.emit('sub', 'abc');
+  socket.emit('sub', 'bcd');
+
+  socket.on('data', function (data) {
+    for ( var id in data ) {
+      var o = data[id];
+      var marker = null;
+      var polyline = null;
+
+      for (i=0; i<markers.length && marker == null; i++)
+        if (markers[i].id == id) {
+          marker = markers[i].marker;
+          polyline = markers[i].polyline;
+      }
+
+      if ( marker == null ) {
+        marker = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP
+        });
+        var opts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
+        polyline = new google.maps.Polyline(opts);
+        var m = new Object( );
+        m.id = id;
+        m.marker = marker;
+        m.polyline = polyline;
+        markers.push(m);
+      }
+
+      var pos = new google.maps.LatLng(o.latitude, o.longitude);
+      marker.setPosition(pos);
+      polyline.getPath().push(pos);
+      $('#content').html(id + ' - ' + o.latitude + ' : ' + o.longitude);
+    }
+  });

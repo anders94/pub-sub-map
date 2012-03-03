@@ -53,9 +53,7 @@ script(type='text/javascript')
 
         var polyOpts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
         polyline = new google.maps.Polyline(polyOpts);
-
-        var infoOpts = {content: id, position: pos};
-        info = new google.maps.InfoWindow(infoOpts);
+        info = new google.maps.InfoWindow();
 
         var m = new Object( );
         m.id = id;
@@ -71,6 +69,7 @@ script(type='text/javascript')
       });
       marker.setPosition(pos);
       polyline.getPath().push(pos);
+      info.setContent('<h1>'+id+'</h1>'+o.latitude+', '+o.longitude);
       info.setPosition(pos);
       $('#content').html(id + ' - ' + o.latitude + ' : ' + o.longitude);
     }

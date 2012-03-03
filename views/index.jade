@@ -32,30 +32,46 @@ script(type='text/javascript')
       var o = data[id];
       var marker = null;
       var polyline = null;
+      var info = null;
+      var pos = new google.maps.LatLng(o.latitude, o.longitude);
 
       for (i=0; i<markers.length && marker == null; i++)
         if (markers[i].id == id) {
           marker = markers[i].marker;
           polyline = markers[i].polyline;
+          info = markers[i].info;
+
       }
 
       if ( marker == null ) {
         marker = new google.maps.Marker({
           map: map,
+          position: pos,
+          clickable: true,
           animation: google.maps.Animation.DROP
         });
-        var opts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
-        polyline = new google.maps.Polyline(opts);
+
+        var polyOpts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
+        polyline = new google.maps.Polyline(polyOpts);
+
+        var infoOpts = {content: id, position: pos};
+        info = new google.maps.InfoWindow(infoOpts);
+
         var m = new Object( );
         m.id = id;
         m.marker = marker;
         m.polyline = polyline;
+        m.info = info;
         markers.push(m);
+
       }
 
-      var pos = new google.maps.LatLng(o.latitude, o.longitude);
+      google.maps.event.addListener(marker, 'click', function() {
+          info.open(map, marker);
+      });
       marker.setPosition(pos);
       polyline.getPath().push(pos);
+      info.setPosition(pos);
       $('#content').html(id + ' - ' + o.latitude + ' : ' + o.longitude);
     }
   });

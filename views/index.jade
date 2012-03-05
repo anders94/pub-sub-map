@@ -10,6 +10,7 @@ script(type='text/javascript')
   var map;
   var markers = new Array();
   var colors = [ '#f00', '#00f', '#0f0' ];
+  var bubble = null;
 
   $(document).ready( function(){
     var opts = {
@@ -18,6 +19,10 @@ script(type='text/javascript')
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map( document.getElementById("map"), opts );
+
+    if (navigator.geolocation != undefined)
+      navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
+
   });
 
   var socket = io.connect();
@@ -75,3 +80,25 @@ script(type='text/javascript')
       $('#content').html(id + ' - ' + o.latitude + ' : ' + o.longitude);
     }
   });
+
+  function positionUpdate(l){
+    var gl = new google.maps.LatLng(l.coords.latitude, l.coords.longitude);
+    if (bubble == null) {
+      bubble = new google.maps.Marker({
+        map: map,
+        position: gl,
+        icon:new google.maps.MarkerImage('/images/bubble.png', null, null, 
+                                         new google.maps.Point(9,9), 
+                                         new google.maps.Size(18,18)),
+        clickable: false
+      });
+    }
+    else {
+      bubble.setPosition(gl);
+    }
+    //map.panTo(gl);
+  }
+
+  function positionUpdateFail(e){
+    console.log(e.message);
+  }

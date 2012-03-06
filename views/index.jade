@@ -1,16 +1,17 @@
 h1= title
 div#content
 div#map.mapBounds
-form(name="subscribeForm")
+form
   input(name="channel");
-  input(type="button", value="subscribe", onClick="socket.emit('sub',document.forms[0].channel.value)")
-  input(type="button", value="unsubscribe", onClick="socket.emit('unsub',document.forms[0].channel.value)")
+  input(type="button", value="Subscribe", onClick="socket.emit('sub',document.forms[0].channel.value)")
+  input(type="button", value="Unsubscribe", onClick="socket.emit('unsub',document.forms[0].channel.value)")
 
 script(type='text/javascript')
   var map;
   var markers = new Array();
   var colors = [ '#f00', '#00f', '#0f0' ];
   var bubble = null;
+  var bubbleLoc = null;
 
   $(document).ready( function(){
     var opts = {
@@ -20,9 +21,10 @@ script(type='text/javascript')
     };
     map = new google.maps.Map( document.getElementById("map"), opts );
 
-    if (navigator.geolocation != undefined)
+    if (navigator.geolocation != undefined) {
       navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-
+      $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
+    }
   });
 
   var socket = io.connect();
@@ -82,11 +84,11 @@ script(type='text/javascript')
   });
 
   function positionUpdate(l){
-    var gl = new google.maps.LatLng(l.coords.latitude, l.coords.longitude);
+    bubbleLoc = new google.maps.LatLng(l.coords.latitude, l.coords.longitude);
     if (bubble == null) {
       bubble = new google.maps.Marker({
         map: map,
-        position: gl,
+        position: bubbleLoc,
         icon:new google.maps.MarkerImage('/images/bubble.png', null, null, 
                                          new google.maps.Point(9,9), 
                                          new google.maps.Size(18,18)),
@@ -94,9 +96,8 @@ script(type='text/javascript')
       });
     }
     else {
-      bubble.setPosition(gl);
+      bubble.setPosition(bubbleLoc);
     }
-    //map.panTo(gl);
   }
 
   function positionUpdateFail(e){

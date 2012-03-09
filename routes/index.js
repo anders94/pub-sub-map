@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'EyeZo' })
+  res.render('index', { title: 'pub-sub-map' })
 };

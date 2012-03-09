@@ -1,20 +1,26 @@
-var cradle = require('cradle');
-var db = new(cradle.Connection)().database('points');
+var mongo = require('mongodb'),
+    Db         = mongo.Db,
+    Connection = mongo.Connection,
+    Server     = mongo.Server;
+var redis = require('redis');
+var db = new Db('points', new Server('127.0.0.1', 27017, {}), {});
 
-var tim = new Date().getTime();
-var lat = 42.3599120000 + (Math.random() / 100);
-var lng = -71.0875660000 + (Math.random() / 100);
+db.open(function(err, db) {
+	var rc = redis.createClient();
+	console.log('adding points as they come in');
 
-console.log('adding random points');
-db.save({key:'abc',time:tim,position:{latitude: lat, longitude: lng, altitude:10}}, function (err, res) {
-	if (err) {
-	    console.log('err:',err);
-	}
-	else {
-	    console.log('save res:',res);
-	    //db.all(function(err,res){
-	    db.view('sets/some', function (err, res) {
-		    console.log('res: ', res);
-		});
-	}
+	rc.on('pmessage', function(pattern, channel, message) {
+		console.log(channel + ': ', message);
+		db.collection('data', function(err, collection) {
+			if (err) {
+			    console.log('err: ', err);
+			}
+			else {
+			    collection.insert({key:channel,location:message});
+			}
+		    });
+	    });
+
+	rc.psubscribe('*');
+
     });

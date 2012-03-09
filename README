@@ -1,0 +1,30 @@
+pub-sub-map
+  a realtime publish / subscribe system for web maps
+
+Requires
+--------------------------------------------------------
+  node
+  redis
+  mongodb
+
+Install
+--------------------------------------------------------
+  cd pub-sub-map/
+  npm install
+
+Quick Start
+--------------------------------------------------------
+start the app:
+  node app.js
+
+start the archiver: (optional)
+  node archiver.js
+
+navigate to:
+  http://localhost:8090/
+  automatically subscribes to 'abc' and 'xyz'
+
+start sending some fake points:
+  node send.js abc
+  node send.js xyz
+

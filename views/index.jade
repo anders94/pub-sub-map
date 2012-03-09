@@ -33,7 +33,7 @@ script(type='text/javascript')
   });
 
   socket.emit('sub', 'abc');
-  socket.emit('sub', 'bcd');
+  socket.emit('sub', 'xyz');
 
   socket.on('data', function (data) {
     for ( var id in data ) {

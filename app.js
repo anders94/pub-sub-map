@@ -48,17 +48,23 @@ io.sockets.on('connection', function (socket) {
 
 	var rc = redis.createClient();
 	var ids = new Array();
-	var limit = 3;
+	var limit = 10;
 
         socket.on('sub', function(id) {
-		// TODO: allow multiple subscriptions when id=[123,456]
-		if (ids.indexOf(id) < 0) {
-		    if (ids.push(id) > limit)
-			rc.unsubscribe(ids.pop());
-		    rc.subscribe(id);
-
+		// enforce alphanumeric ids
+		var rx = new RegExp(/\W/);
+		var a = id.match(rx);
+		if (a == null && id != '') {
+		    if (ids.indexOf(id) < 0) {
+			if (ids.push(id) > limit)
+			    rc.unsubscribe(ids.pop());
+			rc.subscribe(id);
+		    }
+		    console.log('sub: ' + id + ' (' + ids.length + ' subscriptions: ' + ids +')');
 		}
-		console.log('sub: ' + id + ' (' + ids.length + ' subscriptions: ' + ids +')');
+		else {
+		    console.log('ERROR: illegal subscription ' + id);
+		}
 
 	    });
 

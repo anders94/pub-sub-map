@@ -1,0 +1,3 @@
+scope publish / subscribe to 'feed.whatever' rather than 'whatever'
+on subscription, pull last hour's worth of history and then subscribe to channel
+regularize data structure - universal json for db / redis / socket.io / client

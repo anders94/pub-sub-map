@@ -15,8 +15,9 @@ if ( process.argv[2] != null ) {
 					db.close();
 				    }
 				    else {
-					var location = JSON.parse(data.location);
-					console.log(data.key + ': ' + location.latitude + ' ' + location.longitude);
+					if (data.key && data.location){
+					    console.log(data.key + ': ' + data.location.latitude + ' ' + data.location.longitude);
+					}
 				    }
 				});
 			});

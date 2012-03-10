@@ -16,7 +16,7 @@ db.open(function(err, db) {
 			    console.log('err: ', err);
 			}
 			else {
-			    collection.insert({key:channel,location:message});
+			    collection.insert({key:channel,location:JSON.parse(message)});
 			}
 		    });
 	    });

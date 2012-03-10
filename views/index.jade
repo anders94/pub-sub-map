@@ -5,6 +5,7 @@ form
   input(name="channel");
   input(type="button", value="Subscribe", onClick="socket.emit('sub',document.forms[0].channel.value)")
   input(type="button", value="Unsubscribe", onClick="socket.emit('unsub',document.forms[0].channel.value)")
+  input(type="button", value="Show Subscriptions", onClick="socket.emit('subs')")
 
 script(type='text/javascript')
   var map;
@@ -30,6 +31,7 @@ script(type='text/javascript')
   var socket = io.connect();
   socket.on('info', function (data) {
     $( '#content' ).html('info: ' + data);
+    alert(data);
   });
 
   socket.emit('sub', 'abc');

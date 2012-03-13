@@ -12,6 +12,10 @@ var express = require('express')
   , routes = require('./routes');
 var io = require('socket.io');
 var redis = require('redis');
+var mongo = require('mongodb'),
+    Db         = mongo.Db,
+    Connection = mongo.Connection,
+    Server     = mongo.Server;
 
 var app = module.exports = express.createServer(),
     io = io.listen(app);
@@ -42,67 +46,91 @@ app.get('/', routes.index);
 app.listen(webPort);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 
-// socket.io
-io.sockets.on('connection', function (socket) {
-	console.log('Connection: ' + socket.id);
-
-	var rc = redis.createClient();
-	var ids = new Array();
-	var limit = 10;
-
-        socket.on('sub', function(id) {
-		// enforce alphanumeric ids
-		var rx = new RegExp(/\W/);
-		var a = id.match(rx);
-		if (a == null && id != '') {
-		    if (ids.indexOf(id) < 0) {
-			if (ids.push(id) > limit)
-			    rc.unsubscribe(ids.pop());
-			rc.subscribe(id);
+// mongodb / socket.io
+var db = new Db('points', new Server('127.0.0.1', 27017, {}), {});
+db.open(function(err, db) {
+	if (err) {
+	    console.log('ERROR: ',err);
+	}
+	else {
+	    db.collection('data', function(err, collection) {
+		    if (err) {
+			console.log('ERROR: ', err);
 		    }
-		    console.log('sub: ' + id + ' (' + ids.length + ' subscriptions: ' + ids +')');
-		}
-		else {
-		    console.log('ERROR: illegal subscription ' + id);
-		}
+		    else {
+			io.sockets.on('connection', function (socket) {
+				console.log('Connection: ' + socket.id);
 
-	    });
+				var rc = redis.createClient();
+				var keys = new Array();
+				var limit = 10;
 
-	socket.on('unsub', function(id) {
-		var i = ids.indexOf(id);
-		if (i > -1) {
-		    var rest = ids.slice(i + 1 || ids.length);
-		    ids.length = i < 0 ? ids.length + i : i;
-		    ids.push.apply(ids, rest);
-		    rc.unsubscribe(id);
+				socket.on('sub', function(key) {
+					// enforce alphanumeric keys
+					var rx = new RegExp(/\W/);
+					var a = key.match(rx);
+					if (a == null && key != '') {
+					    if (keys.indexOf(key) < 0) {
+						if (keys.push(key) > limit)
+						    rc.unsubscribe('feed.'+keys.pop());
+						collection.find({key: key}, {limit:10}, function(err, cursor) {
+							cursor.each(function(err, data) {
+								if (err)
+								    console.log('error: ', err);
+								else if (data) {
+								    console.log(JSON.stringify(data));
+								    //socket.volatile.emit('data', data);
 
-		}
-		console.log('unsub: ' + id + ' (' + ids.length + ' subscriptions: ' + ids + ')');
+								}
+							    });
+						    });
+						rc.subscribe('feed.'+key);
+					    }
+					    console.log('sub: '+key+' ('+keys.length+' subscriptions: '+keys+')');
+					}
+					else {
+					    console.log('ERROR: illegal subscription '+key);
+					}
 
-	    });
+				    });
 
-        socket.on('subs', function(id) {
-		socket.emit('info', ids);
-		console.log('subs: ' + ids +'');
+				socket.on('unsub', function(key) {
+					var i = keys.indexOf(key);
+					if (i > -1) {
+					    var rest = keys.slice(i + 1 || keys.length);
+					    keys.length = i < 0 ? keys.length + i : i;
+					    keys.push.apply(keys, rest);
+					    rc.unsubscribe('feed.'+key);
 
-	    });
+					}
+					console.log('unsub: ' + key + ' (' + keys.length + ' subscriptions: ' + keys + ')');
 
-	socket.on('disconnect', function () {
-		console.log('disconnect');
-		rc.end();
+				    });
 
-	    });
+				socket.on('subs', function(key) {
+					socket.emit('info', keys);
+					console.log('subs: ' + keys +'');
 
-	rc.on('message', function(id, data) {
-		var o = new Object();
-		o[id] = JSON.parse(data);
-		console.log('rc.on(data): ' + JSON.stringify(o));
-		socket.volatile.emit('data', o);
-	    });
+				    });
 
-	rc.on( 'error', function(err) {
-		console.log('Redis Error: ' + err );
+				socket.on('disconnect', function () {
+					console.log('disconnect');
+					rc.end();
 
-	    });
+				    });
 
+				rc.on('message', function(key, data) {
+					var o = JSON.parse(data);
+					console.log('rc.on(data): ' + JSON.stringify(o));
+					socket.volatile.emit('data', o);
+				    });
+
+				rc.on( 'error', function(err) {
+					console.log('Redis Error: ' + err );
+
+				    });
+			    });
+		    }
+		});
+	}
     });

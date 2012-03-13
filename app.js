@@ -3,6 +3,7 @@
  */
 
 var webPort = 8090;
+var history = true;
 
 /**
  * Module dependencies.
@@ -73,17 +74,21 @@ db.open(function(err, db) {
 					    if (keys.indexOf(key) < 0) {
 						if (keys.push(key) > limit)
 						    rc.unsubscribe('feed.'+keys.pop());
-						collection.find({key: key}, {limit:10}, function(err, cursor) {
-							cursor.each(function(err, data) {
-								if (err)
-								    console.log('error: ', err);
-								else if (data) {
-								    console.log(JSON.stringify(data));
-								    //socket.volatile.emit('data', data);
-
-								}
-							    });
-						    });
+						if (history) {
+						    collection.find({key: key}, {limit:10}, function(err, cursor) {
+							    cursor.each(function(err, data) {
+								    if (err)
+									console.log('error: ', err);
+								    else if (data) {
+									// top level of 'data' here is a {} not a []
+									var a = new Array();
+									a.push(data);
+									console.log(JSON.stringify(a));
+									socket.volatile.emit('data', a);
+								    }
+								});
+							});
+						}
 						rc.subscribe('feed.'+key);
 					    }
 					    console.log('sub: '+key+' ('+keys.length+' subscriptions: '+keys+')');

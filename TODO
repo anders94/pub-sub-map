@@ -3,28 +3,24 @@ on subscription, pull last hour's worth of history and then subscribe to channel
 regularize data structure - universal json for db / redis / socket.io / client
 
 {
-  "key":"abc",
-    {
-      "info":{
-        "name":"Joe Joe","description":"some data goes here","link":"http://droneos.com/abc",
-        "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
-      },
-      "media":{
-        "url":"http://droneos.com/images/123.png",
-        "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
-      },
-      "points":[
-        {"time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064,"altitude":10},
-        {"time":123456790.013",latitude":42.36726707696262,"longitude":-71.07831560278113,"altitude":10},
-        {"time":123456791.017",latitude":42.36784735327353,"longitude":-71.07745171173208,"altitude":10}
-      ]
-    }
-  },
-  "key":"xyz",
-    {
-      "points":[
-        {"time":123456789.021,"latitude":42.36845023718708,"longitude":-71.07698661486188,"altitude":10}
-      ]
-    }
-  }
+  [ "key":"abc",
+    "info":{
+      "name":"Joe Joe","description":"some data goes here","link":"http://droneos.com/abc",
+      "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
+    },
+    "media":{
+      "url":"http://droneos.com/images/123.png",
+      "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
+    },
+    "points":[
+      {"time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064,"altitude":10},
+      {"time":123456790.013",latitude":42.36726707696262,"longitude":-71.07831560278113,"altitude":10},
+      {"time":123456791.017",latitude":42.36784735327353,"longitude":-71.07745171173208,"altitude":10}
+    ]
+  ],
+  [ "key":"xyz",
+    "points":[
+      {"time":123456789.021,"latitude":42.36845023718708,"longitude":-71.07698661486188,"altitude":10}
+    ]
+  ]
 }

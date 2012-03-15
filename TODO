@@ -8,6 +8,7 @@ on subscription, pull last hour's worth of history and then subscribe to channel
     "info":{
       "name":"Test","description":"Description",
       "link":"http://somelink.com","time":1331743052,
+      "markup","<div><img src=\"/a.png\"></div><div>Anders</div>",
       "latitude":25.25,"longitude":-89.234
     },
     "media":[

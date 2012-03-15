@@ -1,24 +1,48 @@
 on subscription, pull last hour's worth of history and then subscribe to channel
 
+-- Barstow's proposed format - key has one info, many media and many points
+
 [
-  { "key":"abc",
+  { 
+    "key":"abc",
     "info":{
-      "name":"Joe Joe","description":"some data goes here","link":"http://droneos.com/abc",
-      "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
+      "name":"Test","description":"Description",
+      "link":"http://somelink.com","time":1331743052,
+      "latitude":25.25,"longitude":-89.234
     },
-    "media":{
-      "url":"http://droneos.com/images/123.png",
-      "time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064
-    },
+    "media":[
+      {
+        "link":"http://medialink1.jpg",
+        "latitude":25.26,"longitude":-90.23,
+        "description":"This is media","time":1331743052
+      }
+    ],
     "points":[
-      {"time":123456789.012,"latitude":42.36688694520503,"longitude":-71.07905153815064,"altitude":10},
-      {"time":123456790.013",latitude":42.36726707696262,"longitude":-71.07831560278113,"altitude":10},
-      {"time":123456791.017",latitude":42.36784735327353,"longitude":-71.07745171173208,"altitude":10}
+      {
+        "latitude":12.34,"longitude":-98.74,
+        "time":1331743052,"altitude":10.12
+      }
     ]
   },
-  { "key":"xyz",
-    "points":[
-      {"time":123456789.021,"latitude":42.36845023718708,"longitude":-71.07698661486188,"altitude":10}
+  {
+    "key":"def",
+    "info":{
+      "name":"Test info 2","description":"Description 2",
+      "link":"http://somelink.com/def","time":1331743052,
+      "latitude":25.25,"longitude":-89.234
+    },
+    "media":[
+      {
+        "link":"http://medialink2.jpg",
+        "latitude":25.26,"longitude":-90.23,
+        "description":"This is media2","time":1331743052
+      }
+    ],
+    "points": [
+      {
+        "latitude":56.78,"longitude":-12.74,
+        "time":1331743052,"altitude":11.11
+      }
     ]
   }
 ]

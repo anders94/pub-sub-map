@@ -75,7 +75,8 @@ db.open(function(err, db) {
 						if (keys.push(key) > limit)
 						    rc.unsubscribe('feed.'+keys.pop());
 						if (history) {
-						    collection.find({key: key}, {limit:10}, function(err, cursor) {
+						    var h = new Array();
+						    collection.find({key:key}).sort({_id:-1}).limit(10, function(err, cursor){
 							    cursor.each(function(err, data) {
 								    if (err)
 									console.log('error: ', err);
@@ -83,8 +84,14 @@ db.open(function(err, db) {
 									// top level of 'data' here is a {} not a []
 									var a = new Array();
 									a.push(data);
-									console.log(JSON.stringify(a));
-									socket.volatile.emit('data', a);
+									h.push(a);
+								    }
+								    else {
+									for (var x=0; x<h.length; x++){
+									    var d = h.pop();
+									    console.log(JSON.stringify(d));
+									    socket.volatile.emit('data', d);
+									}
 								    }
 								});
 							});

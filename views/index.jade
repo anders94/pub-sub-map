@@ -34,8 +34,8 @@ script(type='text/javascript')
     alert(data);
   });
 
+  socket.emit('sub', 'ISS');
   socket.emit('sub', 'abc');
-  socket.emit('sub', 'xyz');
 
   socket.on('data', function (data) {
     for (var x in data) {

@@ -1,0 +1,405 @@
+countryCode	TZ	no.	coordinates	comments	Standard time	Summer time	Notes
+AD	Europe/Andorra	1	+4230+00131		UTC+01	UTC+02	
+AE	Asia/Dubai	2	+2518+05518		UTC+04	-	
+AF	Asia/Kabul	3	+3431+06912		UTC+04:30	-	
+AG	America/Antigua	4	+1703-06148		UTC-04	-	
+AI	America/Anguilla	5	+1812-06304		UTC-04	-	
+AL	Europe/Tirane	6	+4120+01950		UTC+01	UTC+02	
+AM	Asia/Yerevan	7	+4011+04430		UTC+04	UTC+05	
+AN	America/Curacao	8	+1211-06900		UTC-04	-	
+AO	Africa/Luanda	9	-0848+01314		UTC+01	-	
+AQ	Antarctica/McMurdo	10	-7750+16636	McMurdo Station, Ross Island	UTC+12	UTC+13	
+AQ	Antarctica/South_Pole	11	-9000+00000	Amundsen-Scott Station, South Pole	UTC+12	UTC+13	
+AQ	Antarctica/Rothera	12	-6734-06808	Rothera Station, Adelaide Island	UTC-03	-	
+AQ	Antarctica/Palmer	13	-6448-06406	Palmer Station, Anvers Island	UTC-04	UTC-03	
+AQ	Antarctica/Mawson	14	-6736+06253	Mawson Station, Holme Bay	UTC+06	-	
+AQ	Antarctica/Davis	15	-6835+07758	Davis Station, Vestfold Hills	UTC+07	-	
+AQ	Antarctica/Casey	16	-6617+11031	Casey Station, Bailey Peninsula	UTC+08	-	
+AQ	Antarctica/Vostok	17	-7824+10654	Vostok Station, South Magnetic Pole	UTC+00	-	
+AQ	Antarctica/DumontDUrville	18	-6640+14001	Dumont-d'Urville Station, Terre Adelie	UTC+10	-	
+AQ	Antarctica/Syowa	19	-690022+0393524	Syowa Station, East Ongul Island	UTC+03	-	
+AR	America/Argentina/Buenos_Aires	20	-3436-05827	Buenos Aires (BA, CF)	UTC-03	UTC-02	
+AR	America/Argentina/Cordoba	21	-3124-06411	most locations (CB, CC, CN, ER, FM, MN, SE, SF)	UTC-03	UTC-02	
+AR	America/Argentina/Salta	22	-2447-06525	(SA, LP, NQ, RN)	UTC-03	-	
+AR	America/Argentina/Jujuy	23	-2411-06518	Jujuy (JY)	UTC-03	-	
+AR	America/Argentina/Tucuman	24	-2649-06513	Tucuman (TM)	UTC-03	UTC-02	
+AR	America/Argentina/Catamarca	25	-2828-06547	Catamarca (CT), Chubut (CH)	UTC-03	-	
+AR	America/Argentina/La_Rioja	26	-2926-06651	La Rioja (LR)	UTC-03	-	
+AR	America/Argentina/San_Juan	27	-3132-06831	San Juan (SJ)	UTC-03	-	
+AR	America/Argentina/Mendoza	28	-3253-06849	Mendoza (MZ)	UTC-03	-	
+AR	America/Argentina/San_Luis	29	-3319-06621	San Luis (SL)	UTC-04	UTC-03	
+AR	America/Argentina/Rio_Gallegos	30	-5138-06913	Santa Cruz (SC)	UTC-03	-	
+AR	America/Argentina/Ushuaia	31	-5448-06818	Tierra del Fuego (TF)	UTC-03	-	
+AS	Pacific/Pago_Pago	32	-1416-17042		UTC-11	-	
+AT	Europe/Vienna	33	+4813+01620		UTC+01	UTC+02	
+AU	Australia/Lord_Howe	34	-3133+15905	Lord Howe Island	UTC+10:30	UTC+11	
+AU	Australia/Hobart	35	-4253+14719	Tasmania - most locations	UTC+10	UTC+11	
+AU	Australia/Currie	36	-3956+14352	Tasmania - King Island	UTC+10	UTC+11	
+AU	Australia/Melbourne	37	-3749+14458	Victoria	UTC+10	UTC+11	
+AU	Australia/Sydney	38	-3352+15113	New South Wales - most locations	UTC+10	UTC+11	
+AU	Australia/Broken_Hill	39	-3157+14127	New South Wales - Yancowinna	UTC+09:30	UTC+10:30	
+AU	Australia/Brisbane	40	-2728+15302	Queensland - most locations	UTC+10	-	
+AU	Australia/Lindeman	41	-2016+14900	Queensland - Holiday Islands	UTC+10	-	
+AU	Australia/Adelaide	42	-3455+13835	South Australia	UTC+09:30	UTC+10:30	
+AU	Australia/Darwin	43	-1228+13050	Northern Territory	UTC+09:30	-	
+AU	Australia/Perth	44	-3157+11551	Western Australia - most locations	UTC+08	-	
+AU	Australia/Eucla	45	-3143+12852	Western Australia - Eucla area	UTC+08:45	UTC+09:45	
+AW	America/Aruba	46	+1230-06958		UTC-04	-	
+AX	Europe/Mariehamn	47	+6006+01957		UTC+02	UTC+03	
+AZ	Asia/Baku	48	+4023+04951		UTC+04	UTC+05	
+BA	Europe/Sarajevo	49	+4352+01825		UTC+01	UTC+02	
+BB	America/Barbados	50	+1306-05937		UTC-04	-	
+BD	Asia/Dhaka	51	+2343+09025		UTC+06	-	
+BE	Europe/Brussels	52	+5050+00420		UTC+01	UTC+02	
+BF	Africa/Ouagadougou	53	+1222-00131		UTC+00	-	
+BG	Europe/Sofia	54	+4241+02319		UTC+02	UTC+03	
+BH	Asia/Bahrain	55	+2623+05035		UTC+03	-	
+BI	Africa/Bujumbura	56	-0323+02922		UTC+02	-	
+BJ	Africa/Porto-Novo	57	+0629+00237		UTC+01	-	
+BL	America/St_Barthelemy	58	+1753-06251		UTC-04	-	
+BN	Asia/Brunei	60	+0456+11455		UTC+08	-	
+BO	America/La_Paz	61	-1630-06809		UTC-04	-	
+BR	America/Noronha	62	-0351-03225	Atlantic islands	UTC-02	-	
+BR	America/Belem	63	-0127-04829	Amapá, Eastern Pará	UTC-03	-	
+BR	America/Fortaleza	64	-0343-03830	NE Brazil (MA, PI, CE, RN, PB)	UTC-03	-	
+BR	America/Recife	65	-0803-03454	Pernambuco	UTC-03	-	
+BR	America/Araguaina	66	-0712-04812	Tocantins	UTC-03	-	
+BR	America/Maceio	67	-0940-03543	Alagoas, Sergipe	UTC-03	-	
+BR	America/Bahia	68	-1259-03831	Bahia	UTC-03	-	
+BR	America/Sao_Paulo	69	-2332-04637	South & Southeast Brazil (GO, DF, MG, ES, RJ, SP, PR, SC, RS)	UTC-03	UTC-02	
+BR	America/Campo_Grande	70	-2027-05437	Mato Grosso do Sul	UTC-04	UTC-03	
+BR	America/Cuiaba	71	-1535-05605	Mato Grosso	UTC-04	UTC-03	
+BR	America/Santarem	72	-0226-05452	Western Pará	UTC-03	-	
+BR	America/Porto_Velho	73	-0846-06354	Rondonia	UTC-04	-	
+BR	America/Boa_Vista	74	+0249-06040	Roraima	UTC-04	-	
+BR	America/Manaus	75	-0308-06001	Eastern Amazonas	UTC-04	-	
+BR	America/Eirunepe	76	-0640-06952	Western Amazonas	UTC-04	-	
+BR	America/Rio_Branco	77	-0958-06748	Acre	UTC-04	-	
+BS	America/Nassau	78	+2505-07721		UTC-05	UTC-04	
+BT	Asia/Thimphu	79	+2728+08939		UTC+06	-	
+BW	Africa/Gaborone	80	-2439+02555		UTC+02	-	
+BY	Europe/Minsk	81	+5354+02734		UTC+02	UTC+03	
+BZ	America/Belize	82	+1730-08812		UTC-06	-	
+CA	America/St_Johns	83	+4734-05243	Newfoundland Time, including Southeastern Labrador	UTC-03:30	UTC-02:30	
+CA	America/Halifax	84	+4439-06336	Atlantic Time - Nova Scotia (most places), Prince Edward Island	UTC-04	UTC-03	
+CA	America/Glace_Bay	85	+4612-05957	Atlantic Time - Nova Scotia - places that did not observe daylight saving time 1966-1971	UTC-04	UTC-03	
+CA	America/Moncton	86	+4606-06447	Atlantic Time - New Brunswick	UTC-04	UTC-03	
+CA	America/Goose_Bay	87	+5320-06025	Atlantic Time - Labrador - most locations	UTC-04	UTC-03	
+CA	America/Blanc-Sablon	88	+5125-05707	Atlantic Standard Time - Quebec - Lower North Shore	UTC-04	-	
+CA	America/Montreal	89	+4531-07334	Eastern Time - Quebec - most locations	UTC-05	UTC-04	
+CA	America/Toronto	90	+4339-07923	Eastern Time - Ontario - most locations	UTC-05	UTC-04	
+CA	America/Nipigon	91	+4901-08816	Eastern Time - Ontario & Quebec - places that did not observe daylight saving time 1967-1973	UTC-05	UTC-04	
+CA	America/Thunder_Bay	92	+4823-08915	Eastern Time - Thunder Bay, Ontario	UTC-05	UTC-04	
+CA	America/Iqaluit	93	+6344-06828	Eastern Time - east Nunavut - most locations	UTC-05	UTC-04	
+CA	America/Pangnirtung	94	+6608-06544	Eastern Time - Pangnirtung, Nunavut	UTC-05	UTC-04	
+CA	America/Resolute	95	+744144-0944945	Eastern Standard Time - Resolute, Nunavut	UTC-05	UTC-04	
+CA	America/Atikokan	96	+484531-0913718	Eastern Standard Time - Atikokan, Ontario and Southampton Island, Nunavut	UTC-05	-	
+CA	America/Rankin_Inlet	97	+624900-0920459	Central Time - central Nunavut	UTC-06	UTC-05	
+CA	America/Winnipeg	98	+4953-09709	Central Time - Manitoba & west Ontario	UTC-06	UTC-05	
+CA	America/Rainy_River	99	+4843-09434	Central Time - Rainy River & Fort Frances, Ontario	UTC-06	UTC-05	
+CA	America/Regina	100	+5024-10439	Central Standard Time - Saskatchewan - most locations	UTC-06	-	
+CA	America/Swift_Current	101	+5017-10750	Central Standard Time - Saskatchewan - midwest	UTC-06	-	
+CA	America/Edmonton	102	+5333-11328	Mountain Time - Alberta, east British Columbia & west Saskatchewan	UTC-07	UTC-06	
+CA	America/Cambridge_Bay	103	+690650-1050310	Mountain Time - west Nunavut	UTC-07	UTC-06	
+CA	America/Yellowknife	104	+6227-11421	Mountain Time - central Northwest Territories	UTC-07	UTC-06	
+CA	America/Inuvik	105	+682059-1334300	Mountain Time - west Northwest Territories	UTC-07	UTC-06	
+CA	America/Dawson_Creek	106	+5946-12014	Mountain Standard Time - Dawson Creek & Fort Saint John, British Columbia	UTC-07	-	
+CA	America/Vancouver	107	+4916-12307	Pacific Time - west British Columbia	UTC-08	UTC-07	
+CA	America/Whitehorse	108	+6043-13503	Pacific Time - south Yukon	UTC-08	UTC-07	
+CA	America/Dawson	109	+6404-13925	Pacific Time - north Yukon	UTC-08	UTC-07	
+CC	Indian/Cocos	110	-1210+09655		UTC+06:30	-	
+CD	Africa/Kinshasa	111	-0418+01518	west Dem. Rep. of the Congo	UTC+01	-	
+CD	Africa/Lubumbashi	112	-1140+02728	east Dem. Rep. of the Congo	UTC+02	-	
+CF	Africa/Bangui	113	+0422+01835		UTC+01	-	
+CG	Africa/Brazzaville	114	-0416+01517		UTC+01	-	
+CH	Europe/Zurich	115	+4723+00832		UTC+01	UTC+02	
+CI	Africa/Abidjan	116	+0519-00402		UTC+00	-	
+CK	Pacific/Rarotonga	117	-2114-15946		UTC-10	-	
+CL	America/Santiago	118	-3327-07040	Chile - most locations	UTC-04	UTC-03	
+CL	Pacific/Easter	119	-2709-10926	Easter Island & Sala y Gomez	UTC-06	UTC-05	
+CM	Africa/Douala	120	+0403+00942		UTC+01	-	
+CN	Asia/Shanghai	121	+3114+12128	east China - Beijing, Guangdong, Shanghai, etc.	UTC+08	-	Covering historic Chungyuan time zone.
+CN	Asia/Harbin	122	+4545+12641	Heilongjiang (except Mohe), Jilin	UTC+08	-	Covering historic Changpai time zone.
+CN	Asia/Chongqing	123	+2934+10635	central China - Sichuan, Yunnan, Guangxi, Shaanxi, Guizhou, etc.	UTC+08	-	Covering historic Kansu-Szechuan time zone.
+CN	Asia/Urumqi	124	+4348+08735	most of Tibet & Xinjiang	UTC+08	-	Covering historic Sinkiang-Tibet time zone.
+CN	Asia/Kashgar	125	+3929+07559	west Tibet & Xinjiang	UTC+08	-	Covering historic Kunlun time zone.
+CO	America/Bogota	126	+0436-07405		UTC-05	-	
+CR	America/Costa_Rica	127	+0956-08405		UTC-06	-	
+CU	America/Havana	128	+2308-08222		UTC-05	UTC-04	
+CV	Atlantic/Cape_Verde	129	+1455-02331		UTC-01	-	
+CX	Indian/Christmas	130	-1025+10543		UTC+07	-	
+CY	Asia/Nicosia	131	+3510+03322		UTC+02	UTC+03	
+CZ	Europe/Prague	132	+5005+01426		UTC+01	UTC+02	
+DE	Europe/Berlin	133	+5230+01322		UTC+01	UTC+02	In 1945, the Trizone did not follow Berlin's switch to DST, see Time in Germany
+DJ	Africa/Djibouti	134	+1136+04309		UTC+03	-	
+DK	Europe/Copenhagen	135	+5540+01235		UTC+01	UTC+02	
+DM	America/Dominica	136	+1518-06124		UTC-04	-	
+DO	America/Santo_Domingo	137	+1828-06954		UTC-04	-	
+DZ	Africa/Algiers	138	+3647+00303		UTC+01	-	
+EC	America/Guayaquil	139	-0210-07950	mainland	UTC-05	-	
+EC	Pacific/Galapagos	140	-0054-08936	Galapagos Islands	UTC-06	-	
+EE	Europe/Tallinn	141	+5925+02445		UTC+02	UTC+03	
+EG	Africa/Cairo	142	+3003+03115		UTC+02	UTC+03	
+EH	Africa/El_Aaiun	143	+2709-01312		UTC+00	-	
+ER	Africa/Asmara	144	+1520+03853		UTC+03	-	
+ES	Europe/Madrid	145	+4024-00341	mainland	UTC+01	UTC+02	
+ES	Africa/Ceuta	146	+3553-00519	Ceuta & Melilla	UTC+01	UTC+02	
+ES	Atlantic/Canary	147	+2806-01524	Canary Islands	UTC+00	UTC+01	
+ET	Africa/Addis_Ababa	148	+0902+03842		UTC+03	-	
+FI	Europe/Helsinki	149	+6010+02458		UTC+02	UTC+03	
+FJ	Pacific/Fiji	150	-1808+17825		UTC+12	UTC+13	
+FK	Atlantic/Stanley	151	-5142-05751		UTC-04	UTC-03	
+FM	Pacific/Truk	152	+0725+15147	Truk (Chuuk) and Yap	UTC+10	-	
+FM	Pacific/Ponape	153	+0658+15813	Ponape (Pohnpei)	UTC+11	-	
+FM	Pacific/Kosrae	154	+0519+16259	Kosrae	UTC+11	-	
+FO	Atlantic/Faroe	155	+6201-00646		UTC+00	UTC+01	
+FR	Europe/Paris	156	+4852+00220		UTC+01	UTC+02	
+GA	Africa/Libreville	157	+0023+00927		UTC+01	-	
+GB	Europe/London	158	+513030-0000731		UTC+00	UTC+01	
+GD	America/Grenada	159	+1203-06145		UTC-04	-	
+GE	Asia/Tbilisi	160	+4143+04449		UTC+04	-	
+GF	America/Cayenne	161	+0456-05220		UTC-03	-	
+GG	Europe/Guernsey	162	+4927-00232		UTC+00	UTC+01	
+GH	Africa/Accra	163	+0533-00013		UTC+00	-	
+GI	Europe/Gibraltar	164	+3608-00521		UTC+01	UTC+02	
+GL	America/Godthab	165	+6411-05144	most locations	UTC-03	UTC-02	
+GL	America/Danmarkshavn	166	+7646-01840	east coast, north of Scoresbysund	UTC+00	-	
+GL	America/Scoresbysund	167	+7029-02158	Scoresbysund / Ittoqqortoormiit	UTC-01	UTC+00	
+GL	America/Thule	168	+7634-06847	Thule / Pituffik	UTC-04	UTC-03	
+GM	Africa/Banjul	169	+1328-01639		UTC+00	-	
+GN	Africa/Conakry	170	+0931-01343		UTC+00	-	
+GP	America/Guadeloupe	171	+1614-06132		UTC-04	-	
+GQ	Africa/Malabo	172	+0345+00847		UTC+01	-	
+GR	Europe/Athens	173	+3758+02343		UTC+02	UTC+03	
+GS	Atlantic/South_Georgia	174	-5416-03632		UTC-02	-	
+GT	America/Guatemala	175	+1438-09031		UTC-06	-	
+GU	Pacific/Guam	176	+1328+14445		UTC+10	-	
+GW	Africa/Bissau	177	+1151-01535		UTC+00	-	
+GY	America/Guyana	178	+0648-05810		UTC-04	-	
+HK	Asia/Hong_Kong	179	+2217+11409		UTC+08	-	
+HN	America/Tegucigalpa	180	+1406-08713		UTC-06	-	
+HR	Europe/Zagreb	181	+4548+01558		UTC+01	UTC+02	
+HT	America/Port-au-Prince	182	+1832-07220		UTC-05	-	
+HU	Europe/Budapest	183	+4730+01905		UTC+01	UTC+02	
+ID	Asia/Jakarta	184	-0610+10648	Java & Sumatra	UTC+07	-	
+ID	Asia/Pontianak	185	-0002+10920	west & central Borneo	UTC+07	-	
+ID	Asia/Makassar	186	-0507+11924	east & south Borneo, Sulawesi (Celebes), Bali, Nusa Tenggara, west Timor	UTC+08	-	
+ID	Asia/Jayapura	187	-0232+14042	Western New Guinea (Irian Jaya) & Maluku Islands (Moluccas)	UTC+09	-	
+IE	Europe/Dublin	188	+5320-00615		UTC+00	UTC+01	
+IL	Asia/Jerusalem	189	+3146+03514		UTC+02	UTC+03	
+IM	Europe/Isle_of_Man	190	+5409-00428		UTC+00	UTC+01	
+IN	Asia/Kolkata	191	+2232+08822		UTC+05:30	-	Note: Different zones in history, see Time in India
+IO	Indian/Chagos	192	-0720+07225		UTC+06	-	
+IQ	Asia/Baghdad	193	+3321+04425		UTC+03	-	
+IR	Asia/Tehran	194	+3540+05126		UTC+03:30	UTC+04:30	
+IS	Atlantic/Reykjavik	195	+6409-02151		UTC+00	-	
+IT	Europe/Rome	196	+4154+01229		UTC+01	UTC+02	
+JE	Europe/Jersey	197	+4912-00207		UTC+00	UTC+01	
+JM	America/Jamaica	198	+1800-07648		UTC-05	-	
+JO	Asia/Amman	199	+3157+03556		UTC+02	UTC+03	
+JP	Asia/Tokyo	200	+353916+1394441		UTC+09	-	
+KE	Africa/Nairobi	201	-0117+03649		UTC+03	-	
+KG	Asia/Bishkek	202	+4254+07436		UTC+06	-	
+KH	Asia/Phnom_Penh	203	+1133+10455		UTC+07	-	
+KI	Pacific/Tarawa	204	+0125+17300	Gilbert Islands	UTC+12	-	
+KI	Pacific/Enderbury	205	-0308-17105	Phoenix Islands	UTC+13	-	
+KI	Pacific/Kiritimati	206	+0152-15720	Line Islands	UTC+14	-	
+KM	Indian/Comoro	207	-1141+04316		UTC+03	-	
+KN	America/St_Kitts	208	+1718-06243		UTC-04	-	
+KP	Asia/Pyongyang	209	+3901+12545		UTC+09	-	
+KR	Asia/Seoul	210	+3733+12658		UTC+09	-	
+KW	Asia/Kuwait	211	+2920+04759		UTC+03	-	
+KY	America/Cayman	212	+1918-08123		UTC-05	-	
+KZ	Asia/Almaty	213	+4315+07657	most locations	UTC+06	-	
+KZ	Asia/Qyzylorda	214	+4448+06528	Qyzylorda (Kyzylorda, Kzyl-Orda)	UTC+06	-	
+KZ	Asia/Aqtobe	215	+5017+05710	Aqtobe (Aktobe)	UTC+05	-	
+KZ	Asia/Aqtau	216	+4431+05016	Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)	UTC+05	-	
+KZ	Asia/Oral	217	+5113+05121	West Kazakhstan	UTC+05	-	
+LA	Asia/Vientiane	218	+1758+10236		UTC+07	-	
+LB	Asia/Beirut	219	+3353+03530		UTC+02	UTC+03	
+LC	America/St_Lucia	220	+1401-06100		UTC-04	-	
+LI	Europe/Vaduz	221	+4709+00931		UTC+01	UTC+02	
+LK	Asia/Colombo	222	+0656+07951		UTC+05:30	-	
+LR	Africa/Monrovia	223	+0618-01047		UTC+00	-	
+LS	Africa/Maseru	224	-2928+02730		UTC+02	-	
+LT	Europe/Vilnius	225	+5441+02519		UTC+02	UTC+03	
+LU	Europe/Luxembourg	226	+4936+00609		UTC+01	UTC+02	
+LV	Europe/Riga	227	+5657+02406		UTC+02	UTC+03	
+LY	Africa/Tripoli	228	+3254+01311		UTC+02	-	
+MA	Africa/Casablanca	229	+3339-00735		UTC+00	-	
+MC	Europe/Monaco	230	+4342+00723		UTC+01	UTC+02	
+MD	Europe/Chisinau	231	+4700+02850		UTC+02	UTC+03	
+ME	Europe/Podgorica	232	+4226+01916		UTC+01	UTC+02	
+MF	America/Marigot	233	+1804-06305		UTC-04	-	
+MG	Indian/Antananarivo	234	-1855+04731		UTC+03	-	
+MH	Pacific/Majuro	235	+0709+17112	most locations	UTC+12	-	
+MH	Pacific/Kwajalein	236	+0905+16720	Kwajalein	UTC+12	-	
+MK	Europe/Skopje	237	+4159+02126		UTC+01	UTC+02	
+ML	Africa/Bamako	238	+1239-00800		UTC+00	-	
+MM	Asia/Rangoon	239	+1647+09610		UTC+06:30	-	
+MN	Asia/Ulaanbaatar	240	+4755+10653	most locations	UTC+08	-	
+MN	Asia/Hovd	241	+4801+09139	Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan	UTC+07	-	
+MN	Asia/Choibalsan	242	+4804+11430	Dornod, Sukhbaatar	UTC+08	-	
+MO	Asia/Macau	243	+2214+11335		UTC+08	-	
+MP	Pacific/Saipan	244	+1512+14545		UTC+10	-	
+MQ	America/Martinique	245	+1436-06105		UTC-04	-	
+MR	Africa/Nouakchott	246	+1806-01557		UTC+00	-	
+MS	America/Montserrat	247	+1643-06213		UTC-04	-	
+MT	Europe/Malta	248	+3554+01431		UTC+01	UTC+02	
+MU	Indian/Mauritius	249	-2010+05730		UTC+04	-	
+MV	Indian/Maldives	250	+0410+07330		UTC+05	-	
+MW	Africa/Blantyre	251	-1547+03500		UTC+02	-	
+MX	America/Mexico_City	252	+1924-09909	Central Time - most locations	UTC-06	UTC-05	
+MX	America/Cancun	253	+2105-08646	Central Time - Quintana Roo	UTC-06	UTC-05	
+MX	America/Merida	254	+2058-08937	Central Time - Campeche, Yucatan	UTC-06	UTC-05	
+MX	America/Monterrey	255	+2540-10019	Mexican Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas away from US border	UTC-06	UTC-05	
+MX	America/Matamoros	256	+2550-09730	US Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas near US border	UTC-06	UTC-05	
+MX	America/Mazatlan	257	+2313-10625	Mountain Time - Baja California Sur, Nayarit, Sinaloa	UTC-07	UTC-06	
+MX	America/Chihuahua	258	+2838-10605	Mexican Mountain Time - Chihuahua away from US border	UTC-07	UTC-06	
+#MX	America/Ojinaga	259	+2934-10425	US Mountain Time - Chihuahua near US border	UTC-07	UTC-06	
+MX	America/Hermosillo	260	+2904-11058	Mountain Standard Time - Sonora	UTC-07	-	
+MX	America/Tijuana	261	+3232-11701	US Pacific Time - Baja California near US border	UTC-08	UTC-07	
+MX	America/Santa_Isabel	262	+3018-11452	Mexican Pacific Time - Baja California away from US border	UTC-08	UTC-07	
+MY	Asia/Kuala_Lumpur	263	+0310+10142	peninsular Malaysia	UTC+08	-	
+MY	Asia/Kuching	264	+0133+11020	Sabah & Sarawak	UTC+08	-	
+MZ	Africa/Maputo	265	-2558+03235		UTC+02	-	
+NA	Africa/Windhoek	266	-2234+01706		UTC+01	UTC+02	
+NC	Pacific/Noumea	267	-2216+16627		UTC+11	-	
+NE	Africa/Niamey	268	+1331+00207		UTC+01	-	
+NF	Pacific/Norfolk	269	-2903+16758		UTC+11:30	-	
+NG	Africa/Lagos	270	+0627+00324		UTC+01	-	
+NI	America/Managua	271	+1209-08617		UTC-06	-	
+NL	Europe/Amsterdam	272	+5222+00454		UTC+01	UTC+02	
+NO	Europe/Oslo	273	+5955+01045		UTC+01	UTC+02	
+NP	Asia/Kathmandu	274	+2743+08519		UTC+05:45	-	
+NR	Pacific/Nauru	275	-0031+16655		UTC+12	-	
+NU	Pacific/Niue	276	-1901-16955		UTC-11	-	
+NZ	Pacific/Auckland	277	-3652+17446	most locations	UTC+12	UTC+13	
+NZ	Pacific/Chatham	278	-4357-17633	Chatham Islands	UTC+12:45	UTC+13:45	
+OM	Asia/Muscat	279	+2336+05835		UTC+04	-	
+PA	America/Panama	280	+0858-07932		UTC-05	-	
+PE	America/Lima	281	-1203-07703		UTC-05	-	
+PF	Pacific/Tahiti	282	-1732-14934	Society Islands	UTC-10	-	
+PF	Pacific/Marquesas	283	-0900-13930	Marquesas Islands	UTC-09:30	-	
+PF	Pacific/Gambier	284	-2308-13457	Gambier Islands	UTC-09	-	
+PG	Pacific/Port_Moresby	285	-0930+14710		UTC+10	-	
+PH	Asia/Manila	286	+1435+12100		UTC+08	-	
+PK	Asia/Karachi	287	+2452+06703		UTC+06	-	
+PL	Europe/Warsaw	288	+5215+02100		UTC+01	UTC+02	
+PM	America/Miquelon	289	+4703-05620		UTC-03	UTC-02	
+PN	Pacific/Pitcairn	290	-2504-13005		UTC-08	-	
+PR	America/Puerto_Rico	291	+182806-0660622		UTC-04	-	
+PS	Asia/Gaza	292	+3130+03428		UTC+02	UTC+03	
+PT	Europe/Lisbon	293	+3843-00908	mainland	UTC+00	UTC+01	
+PT	Atlantic/Madeira	294	+3238-01654	Madeira Islands	UTC+00	UTC+01	
+PT	Atlantic/Azores	295	+3744-02540	Azores	UTC-01	UTC+00	
+PW	Pacific/Palau	296	+0720+13429		UTC+09	-	
+PY	America/Asuncion	297	-2516-05740		UTC-04	UTC-03	
+QA	Asia/Qatar	298	+2517+05132		UTC+03	-	
+RE	Indian/Reunion	299	-2052+05528		UTC+04	-	
+RO	Europe/Bucharest	300	+4426+02606		UTC+02	UTC+03	
+RS	Europe/Belgrade	301	+4450+02030		UTC+01	UTC+02	
+RU	Europe/Kaliningrad	302	+5443+02030	Moscow-01 - Kaliningrad	UTC+02	UTC+03	
+RU	Europe/Moscow	303	+5545+03735	Moscow+00 - west Russia	UTC+03	UTC+04	
+RU	Europe/Volgograd	304	+4844+04425	Moscow+00 - Caspian Sea	UTC+03	UTC+04	
+RU	Europe/Samara	305	+5312+05009	Moscow+00 - Samara, Udmurtia	UTC+03	UTC+04	
+RU	Asia/Yekaterinburg	306	+5651+06036	Moscow+02 - Urals	UTC+05	UTC+06	
+RU	Asia/Omsk	307	+5500+07324	Moscow+03 - west Siberia	UTC+06	UTC+07	
+RU	Asia/Novosibirsk	308	+5502+08255	Moscow+03 - Novosibirsk	UTC+06	UTC+07	
+#RU	Asia/Novokuznetsk	309	+5345+08707	Moscow+03 - Novokuznetsk	UTC+06	UTC+07	
+RU	Asia/Krasnoyarsk	310	+5601+09250	Moscow+04 - Yenisei River	UTC+07	UTC+08	
+RU	Asia/Irkutsk	311	+5216+10420	Moscow+05 - Lake Baikal	UTC+08	UTC+09	
+RU	Asia/Yakutsk	312	+6200+12940	Moscow+06 - Lena River	UTC+09	UTC+10	
+RU	Asia/Vladivostok	313	+4310+13156	Moscow+07 - Amur River	UTC+10	UTC+11	
+RU	Asia/Sakhalin	314	+4658+14242	Moscow+07 - Sakhalin Island	UTC+10	UTC+11	
+RU	Asia/Magadan	315	+5934+15048	Moscow+08 - Magadan	UTC+11	UTC+12	
+RU	Asia/Kamchatka	316	+5301+15839	Moscow+08 - Kamchatka	UTC+11	UTC+12	
+RU	Asia/Anadyr	317	+6445+17729	Moscow+08 - Bering Sea	UTC+11	UTC+12	
+RW	Africa/Kigali	318	-0157+03004		UTC+02	-	
+SA	Asia/Riyadh	319	+2438+04643		UTC+03	-	
+SB	Pacific/Guadalcanal	320	-0932+16012		UTC+11	-	
+SC	Indian/Mahe	321	-0440+05528		UTC+04	-	
+SD	Africa/Khartoum	322	+1536+03232		UTC+03	-	
+SE	Europe/Stockholm	323	+5920+01803		UTC+01	UTC+02	
+SG	Asia/Singapore	324	+0117+10351		UTC+08	-	
+SH	Atlantic/St_Helena	325	-1555-00542	Ascension and Tristan da Cunha	UTC+00	-	
+SI	Europe/Ljubljana	326	+4603+01431		UTC+01	UTC+02	
+SJ	Arctic/Longyearbyen	327	+7800+01600		UTC+01	UTC+02	
+SK	Europe/Bratislava	328	+4809+01707		UTC+01	UTC+02	
+SL	Africa/Freetown	329	+0830-01315		UTC+00	-	
+SM	Europe/San_Marino	330	+4355+01228		UTC+01	UTC+02	
+SN	Africa/Dakar	331	+1440-01726		UTC+00	-	
+SO	Africa/Mogadishu	332	+0204+04522		UTC+03	-	
+SR	America/Paramaribo	333	+0550-05510		UTC-03	-	
+ST	Africa/Sao_Tome	334	+0020+00644		UTC+00	-	
+SV	America/El_Salvador	335	+1342-08912		UTC-06	-	
+SY	Asia/Damascus	336	+3330+03618		UTC+02	UTC+03	
+SZ	Africa/Mbabane	337	-2618+03106		UTC+02	-	
+TC	America/Grand_Turk	338	+2128-07108		UTC-05	UTC-04	
+TD	Africa/Ndjamena	339	+1207+01503		UTC+01	-	
+TF	Indian/Kerguelen	340	-492110+0701303		UTC+05	-	
+TG	Africa/Lome	341	+0608+00113		UTC+00	-	
+TH	Asia/Bangkok	342	+1345+10031		UTC+07	-	
+TJ	Asia/Dushanbe	343	+3835+06848		UTC+05	-	
+TK	Pacific/Fakaofo	344	-0922-17114		UTC-10	-	
+TL	Asia/Dili	345	-0833+12535		UTC+09	-	
+TM	Asia/Ashgabat	346	+3757+05823		UTC+05	-	
+TN	Africa/Tunis	347	+3648+01011		UTC+01	UTC+02	
+TO	Pacific/Tongatapu	348	-2110-17510		UTC+13	-	
+TR	Europe/Istanbul	349	+4101+02858		UTC+02	UTC+03	
+TT	America/Port_of_Spain	350	+1039-06131		UTC-04	-	
+TV	Pacific/Funafuti	351	-0831+17913		UTC+12	-	
+TW	Asia/Taipei	352	+2503+12130		UTC+08	-	
+TZ	Africa/Dar_es_Salaam	353	-0648+03917		UTC+03	-	
+UA	Europe/Kiev	354	+5026+03031	most locations	UTC+02	UTC+03	
+UA	Europe/Uzhgorod	355	+4837+02218	Ruthenia	UTC+02	UTC+03	
+UA	Europe/Zaporozhye	356	+4750+03510	Zaporozh'ye, Eastern Lugansk	UTC+02	UTC+03	
+UA	Europe/Simferopol	357	+4457+03406	central Crimea	UTC+02	UTC+03	
+UG	Africa/Kampala	358	+0019+03225		UTC+03	-	
+UM	Pacific/Johnston	359	+1645-16931	Johnston Atoll	UTC-10	-	
+UM	Pacific/Midway	360	+2813-17722	Midway Islands	UTC-11	-	
+UM	Pacific/Wake	361	+1917+16637	Wake Island	UTC+12	-	
+US	America/New_York	362	+404251-0740023	Eastern Time	UTC-05	UTC-04	
+US	America/Detroit	363	+421953-0830245	Eastern Time - Michigan - most locations	UTC-05	UTC-04	
+US	America/Kentucky/Louisville	364	+381515-0854534	Eastern Time - Kentucky - Louisville area	UTC-05	UTC-04	
+US	America/Kentucky/Monticello	365	+364947-0845057	Eastern Time - Kentucky - Wayne County	UTC-05	UTC-04	
+US	America/Indiana/Indianapolis	366	+394606-0860929	Eastern Time - Indiana - most locations	UTC-05	UTC-04	
+US	America/Indiana/Vincennes	367	+384038-0873143	Eastern Time - Indiana - Daviess, Dubois, Knox & Martin Counties	UTC-05	UTC-04	
+US	America/Indiana/Winamac	368	+410305-0863611	Eastern Time - Indiana - Pulaski County	UTC-05	UTC-04	
+US	America/Indiana/Marengo	369	+382232-0862041	Eastern Time - Indiana - Crawford County	UTC-05	UTC-04	
+US	America/Indiana/Petersburg	370	+382931-0871643	Eastern Time - Indiana - Pike County	UTC-05	UTC-04	
+US	America/Indiana/Vevay	371	+384452-0850402	Eastern Time - Indiana - Switzerland County	UTC-05	UTC-04	
+US	America/Chicago	372	+415100-0873900	Central Time	UTC-06	UTC-05	
+US	America/Indiana/Tell_City	373	+375711-0864541	Central Time - Indiana - Perry County	UTC-06	UTC-05	
+US	America/Indiana/Knox	374	+411745-0863730	Central Time - Indiana - Starke County	UTC-06	UTC-05	
+US	America/Menominee	375	+450628-0873651	Central Time - Michigan - Dickinson, Gogebic, Iron & Menominee Counties	UTC-06	UTC-05	
+US	America/North_Dakota/Center	376	+470659-1011757	Central Time - North Dakota - Oliver County	UTC-06	UTC-05	
+US	America/North_Dakota/New_Salem	377	+465042-1012439	Central Time - North Dakota - Morton County (except Mandan area)	UTC-06	UTC-05	
+US	America/Denver	378	+394421-1045903	Mountain Time	UTC-07	UTC-06	
+US	America/Boise	379	+433649-1161209	Mountain Time - south Idaho & east Oregon	UTC-07	UTC-06	
+US	America/Shiprock	380	+364708-1084111	Mountain Time - Navajo	UTC-07	UTC-06	
+US	America/Phoenix	381	+332654-1120424	Mountain Standard Time - Arizona	UTC-07	-	
+US	America/Los_Angeles	382	+340308-1181434	Pacific Time	UTC-08	UTC-07	
+US	America/Anchorage	383	+611305-1495401	Alaska Time	UTC-09	UTC-08	
+US	America/Juneau	384	+581807-1342511	Alaska Time - Alaska panhandle	UTC-09	UTC-08	
+US	America/Yakutat	385	+593249-1394338	Alaska Time - Alaska panhandle neck	UTC-09	UTC-08	
+US	America/Nome	386	+643004-1652423	Alaska Time - west Alaska	UTC-09	UTC-08	
+US	America/Adak	387	+515248-1763929	Aleutian Islands	UTC-10	UTC-09	
+US	Pacific/Honolulu	388	+211825-1575130	Hawaii	UTC-10	-	
+UY	America/Montevideo	389	-3453-05611		UTC-03	UTC-02	
+UZ	Asia/Samarkand	390	+3940+06648	west Uzbekistan	UTC+05	-	
+UZ	Asia/Tashkent	391	+4120+06918	east Uzbekistan	UTC+05	-	
+VA	Europe/Vatican	392	+415408+0122711		UTC+01	UTC+02	
+VC	America/St_Vincent	393	+1309-06114		UTC-04	-	
+VE	America/Caracas	394	+1030-06656		UTC-04:30	-	
+VG	America/Tortola	395	+1827-06437		UTC-04	-	
+VI	America/St_Thomas	396	+1821-06456		UTC-04	-	
+VN	Asia/Ho_Chi_Minh	397	+1045+10640		UTC+07	-	
+VU	Pacific/Efate	398	-1740+16825		UTC+11	-	
+WF	Pacific/Wallis	399	-1318-17610		UTC+12	-	
+WS	Pacific/Apia	400	-1350-17144		UTC-11	UTC-10	
+YE	Asia/Aden	401	+1245+04512		UTC+03	-	
+YT	Indian/Mayotte	402	-1247+04514		UTC+03	-	
+ZA	Africa/Johannesburg	403	-2615+02800		UTC+02	-	
+ZM	Africa/Lusaka	404	-1525+02817		UTC+02	-	
+ZW	Africa/Harare	405	-1750+03103		UTC+02	-	

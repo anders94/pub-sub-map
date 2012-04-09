@@ -1,4 +1,5 @@
-var redis = require('redis');
+var redis = require('redis'),
+    client = redis.createClient();
 
 /*
  * GET home page.
@@ -22,13 +23,15 @@ exports.points = function(req, res){
 	    var points = json.points;
 	    for(var x=0; x<points.length; x++){
 		var point = points[x];
-		if(rational(point.latitude) && rational(point.longitude))
+		if(rational(point.latitude) && rational(point.longitude)){
 		    console.log(point.longitude + ', ' + point.latitude);
+		    client.publish('feed.'+key, '{"key":"'+key+'","points":['+JSON.stringify( point )+']}' );
+		}
 	    }
 	}
     }
 	    
-    res.send('{"message":true}');
+    res.send('{"success":true}');
 }
 
 function rational(x){

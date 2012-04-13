@@ -62,6 +62,8 @@ socket.on('data', function (data) {
             m.polyline = polyline;
             m.info = info;
             markers.push(m);
+	    map.panTo(pos);
+
           }
 
           google.maps.event.addListener(marker, 'click', function() {

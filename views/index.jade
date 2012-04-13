@@ -2,7 +2,7 @@ h1= title
 div#map.mapBounds
 form
   input(name='channel')
-  input(type='button', value='Subscribe', onClick="socket.emit('sub,document.forms[0].channel.value)")
+  input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
   input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
   input(type='button', value='Show Subscriptions', onClick="socket.emit('subs')")
 

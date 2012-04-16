@@ -1,35 +1,90 @@
-!!!
-html
+!!! 5
+html(lang="en")
   head
-    title= title
+    title EyeZo: Share Location
 
     meta(charset='utf-8')
     meta(name='description', content='EyeZo.com gives you a short URL for any location on Earth.')
     meta(name='author', content='Anders Brownworth')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
     meta(name='HandheldFriendly', content='True')
     meta(name='MobileOptimized', content='320')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='apple-mobile-web-app-capable', content='true')
     meta(name='apple-mobile-web-app-status-bar-style', content='black')
     meta(http-equiv='cleartype', content='on')
 
-    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/assets/h/apple-touch-icon.png');
-    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/assets/m/apple-touch-icon.png');
-    link(rel='apple-touch-icon-precomposed', href='/assets/l/apple-touch-icon-precomposed.png');
-    link(rel='shortcut icon', href='/assets/l/apple-touch-icon.png');
-    link(rel='apple-touch-startup-image', href='/assets/l/splash.png')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css', media='screen')
+    // Le styles
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.css')
+    style
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/map.css')
 
-    script(type='text/javascript')
-      (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
-    script(src='/javascripts/modernizr-custom.js')
-    script('type='text/javascript')
-      Modernizr.mq('(min-width:0)') || document.write('<script src="/javascripts/respond.min.js">\\x3C/script>')
-    script(src='/javascripts/jquery-1.7.1.min.js')
-    script(src='/socket.io/socket.io.js')
-    script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
-    script(src='/javascripts/eyezo.js')
-  body!= body
+    // Le HTML5 shim, for IE6-8 support of HTML5 elements
+    //[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]
+
+    // Le fav and touch icons
+    link(rel='shortcut icon', href='/images/favicon.ico');
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/images/apple-touch-icon-114-precomposed.png');
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/images/apple-touch-icon-72-precomposed.png');
+    link(rel='apple-touch-icon-precomposed', href='/images/apple-touch-icon-57-precomposed.png');
+    link(rel='apple-touch-startup-image', href='/images/splash.png')
+
+    script(src='/javascripts/jquery.js')
+
+  body
+    div.navbar.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='/')
+            img(src='/images/eyezo-logo.png', width='106', height='35')
+          div.nav-collapse
+            ul.nav
+              li.active
+                a(href='/') Home
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contacts
+
+  div.container
+    !=body
+
+  div.navbar.navbar-fixed-bottom
+      div.navbar-inner
+        div.container
+          div.nav-collapse
+            ul.nav
+              li.active
+                a(href='/') Home
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contact
+
+  // Le javascript
+  script(src='/socket.io/socket.io.js')
+  script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
+  script(src='/javascripts/eyezo.js')
+  script(src='/javascripts/bootstrap-transition.js')
+  script(src='/javascripts/bootstrap-alert.js')
+  script(src='/javascripts/bootstrap-modal.js')
+  script(src='/javascripts/bootstrap-dropdown.js')
+  script(src='/javascripts/bootstrap-scrollspy.js')
+  script(src='/javascripts/bootstrap-tab.js')
+  script(src='/javascripts/bootstrap-tooltip.js')
+  script(src='/javascripts/bootstrap-popover.js')
+  script(src='/javascripts/bootstrap-button.js')
+  script(src='/javascripts/bootstrap-collapse.js')
+  script(src='/javascripts/bootstrap-carousel.js')
+  script(src='/javascripts/bootstrap-typeahead.js')
   script(type='text/javascript')
     var _gaq=[["_setAccount","UA-74866-11"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

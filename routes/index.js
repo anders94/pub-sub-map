@@ -6,7 +6,7 @@ var redis = require('redis'),
  */
 
 exports.index = function(req, res){
-    res.render('index', { title: 'pub-sub-map' })
+    res.render('index')
 };
 
 

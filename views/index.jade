@@ -1,13 +1,23 @@
-h1= title
-div#map.mapBounds
-form
-  input(name='channel')
-  input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
-  input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
-  input(type='button', value='Show Subscriptions', onClick="socket.emit('subs')")
+div.row
+  div.span9
+    h1 Map
+    div#map.mapBounds
+    form
+      input(name='channel')
+      input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
+      input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
+      input(type='button', value='Show Subscriptions', onClick="socket.emit('subs')")
+      script(type='text/javascript')
+        $(function(){
+          socket.emit('sub', 'ISS');
+          socket.emit('sub', 'abc');
+        });
 
-script(type='text/javascript')
-  $(function(){
-    socket.emit('sub', 'ISS');
-    socket.emit('sub', 'abc');
-  });
+  div.span3
+    h1 Info
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
+      | et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+      | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+      | dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+      | officia deserunt mollit anim id est laborum.

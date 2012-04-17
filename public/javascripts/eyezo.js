@@ -4,23 +4,8 @@ var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD',
 var bubble = null;
 var bubbleLoc = null;
 
-$(document).ready( function(){
-  var opts = {
-    center: new google.maps.LatLng(42.360202816455384,-71.08714687838953),
-    zoom: 12,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map( document.getElementById("map"), opts );
-
-  if (navigator.geolocation != undefined) {
-    navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-    $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
-  }
-});
-
 var socket = io.connect();
 socket.on('info', function (data) {
-  //$( '#content' ).html('info: ' + data);
   alert(data);
 });
 

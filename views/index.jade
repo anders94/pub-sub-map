@@ -2,6 +2,9 @@ div.row
   div.span9
     h1 Map
     div#map.mapBounds
+
+  div.span3
+    h1 Subscribe
     form
       input(name='channel')
       input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
@@ -12,9 +15,19 @@ div.row
           socket.emit('sub', 'ISS');
           socket.emit('sub', 'abc');
         });
+        $(document).ready( function(){
+          var opts = {
+            center: new google.maps.LatLng(42.360202816455384,-71.08714687838953),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map( document.getElementById("map"), opts );
 
-  div.span3
-    h1 Info
+          if (navigator.geolocation != undefined) {
+            navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
+            $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
+          }
+        });
     p
       | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
       | et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 

@@ -1,10 +1,12 @@
 div.row
   div.span9
-    h1 Map
     div#map.mapBounds
+    script(type='text/javascript')
+      $(window).resize(function() {
+        resize();
+      });
 
   div.span3
-    h1 Subscribe
     form
       input(name='channel')
       input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
@@ -16,6 +18,7 @@ div.row
           socket.emit('sub', 'abc');
         });
         $(document).ready( function(){
+          resize();
           var opts = {
             center: new google.maps.LatLng(42.360202816455384,-71.08714687838953),
             zoom: 12,

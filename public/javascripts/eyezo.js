@@ -4,6 +4,20 @@ var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD',
 var bubble = null;
 var bubbleLoc = null;
 
+var header_height = 60;
+var footer_height = 48;
+var map_height_min = 350;
+
+function resize() {
+  var non_map_content_height = header_height + footer_height;
+  var map_height = map_height_min;
+  var difference = $(window).height( ) - non_map_content_height;
+  if ( difference > map_height )
+    map_height = difference;
+
+  $("#map").css( 'height', map_height );
+}
+
 var socket = io.connect();
 socket.on('info', function (data) {
   alert(data);

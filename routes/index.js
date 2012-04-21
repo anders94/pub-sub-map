@@ -2,7 +2,7 @@ var redis = require('redis'),
     rc = redis.createClient();
 
 /*
- * GET home page.
+ * GET routines
  */
 
 exports.index = function(req, res){
@@ -10,13 +10,13 @@ exports.index = function(req, res){
 };
 
 exports.group = function(req, res){
+    console.log(req.url);
     res.render('group');
 };
 
 /*
  * POST points.json
  */
-
 
 exports.points = function(req, res){
     var json = req.body;

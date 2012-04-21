@@ -38,7 +38,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/*', routes.group);
+app.get(/^\/\w{2,8}$/, routes.group); // match two to eight character URLs as group keys
 app.post('/points.json', routes.points);
 
 app.listen(webPort);

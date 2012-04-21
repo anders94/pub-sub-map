@@ -38,6 +38,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+app.get('/*', routes.group);
 app.post('/points.json', routes.points);
 
 app.listen(webPort);

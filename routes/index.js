@@ -9,6 +9,9 @@ exports.index = function(req, res){
     res.render('index')
 };
 
+exports.group = function(req, res){
+    res.render('group');
+};
 
 /*
  * POST points.json

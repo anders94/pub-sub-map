@@ -1,4 +1,4 @@
-div.row
+div.row-fluid
   div.span9
     div#map.mapBounds
     script(type='text/javascript')
@@ -7,33 +7,35 @@ div.row
       });
 
   div.span3
+    h1 EyeZo
+    p
+      | EyeZo lets you track things on maps in realtime. For example, this page lets you see the ground track of
+      | the International Space Station.
+    p
+      | The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. It follows 
+      | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular 
+      | structure whose first component was launched in 1998. Like many artificial satellites, the station can be 
+      | seen from Earth with the naked eye.
     form
       input(name='channel')
       input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
       input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
       input(type='button', value='Show Subscriptions', onClick="socket.emit('subs')")
-      script(type='text/javascript')
-        $(function(){
-          socket.emit('sub', 'ISS');
-          socket.emit('sub', 'abc');
-        });
-        $(document).ready( function(){
-          resize();
-          var opts = {
-            center: new google.maps.LatLng(37.062482, -95.677139),
-            zoom: 4,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          map = new google.maps.Map( document.getElementById("map"), opts );
+    script(type='text/javascript')
+      $(function(){
+        socket.emit('sub', 'ISS');
+      });
+      $(document).ready( function(){
+        resize();
+        var opts = {
+          center: new google.maps.LatLng(37.062482, -95.677139),
+          zoom: 4,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map( document.getElementById("map"), opts );
 
-          if (navigator.geolocation != undefined) {
-            navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-            $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
-          }
-        });
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
-      | et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-      | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-      | dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-      | officia deserunt mollit anim id est laborum.
+        if (navigator.geolocation != undefined) {
+          navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
+          $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
+        }
+      });

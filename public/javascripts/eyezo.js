@@ -4,8 +4,8 @@ var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD',
 var bubble = null;
 var bubbleLoc = null;
 
-var header_height = 60;
-var footer_height = 48;
+var header_height = 70;
+var footer_height = 58;
 var map_height_min = 350;
 
 function resize() {

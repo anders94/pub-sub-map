@@ -3,7 +3,7 @@ div.row
     div#map.mapBounds
     script(type='text/javascript')
       $(function(){
-        socket.emit('sub', 'abc');
+        socket.emit('sub', '#{key}');
       });
       $(window).resize(function() {
         resize();
@@ -24,7 +24,7 @@ div.row
       });
 
   div.span3
-    h1 Map Title
+    h1= key
     p
       | This is some info about the map on this page. It is an optional description the user can
       | add to the group of points on this map.

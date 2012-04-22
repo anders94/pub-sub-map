@@ -2,19 +2,6 @@ var redis = require('redis'),
     rc = redis.createClient();
 
 /*
- * GET routines
- */
-
-exports.index = function(req, res){
-    res.render('index')
-};
-
-exports.group = function(req, res){
-    console.log(req.url);
-    res.render('group');
-};
-
-/*
  * POST points.json
  */
 

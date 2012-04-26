@@ -16,11 +16,12 @@ div.row-fluid
       | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular 
       | structure whose first component was launched in 1998. Like many artificial satellites, the station can be 
       | seen from Earth with the naked eye.
-    form
+    form(name='control')
       input(name='channel')
       input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
       input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
-      input(type='button', value='Show Subscriptions', onClick="socket.emit('subs')")
+      input(type='button', value='Refresh', onClick="socket.emit('subs')")
+      ul#centerList
     script(type='text/javascript')
       $(function(){
         socket.emit('sub', 'ISS');
@@ -36,6 +37,6 @@ div.row-fluid
 
         if (navigator.geolocation != undefined) {
           navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-          $('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
+          //$('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
         }
       });

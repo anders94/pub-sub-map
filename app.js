@@ -88,7 +88,7 @@ io.sockets.on('connection', function (socket) {
 	    });
 
 	socket.on('subs', function(key) {
-		socket.emit('info', keys);
+		socket.emit('subs', keys);
 		console.log('subs: ' + keys +'');
 
 	    });

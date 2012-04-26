@@ -1,77 +1,10 @@
-html, body {
-  margin:0;
-  padding:0;
-  height:100%;
-  font-family: Verdana, "Bitstream Vera Sans", sans-serif;
-
-}
-
-#header {
-  width: 100%;
-  height: 40px;
-  padding: 0px;
-  overflow: hidden;
-  background-image: -ms-linear-gradient(top, #555555 0%, #111111 100%); /* IE10 */
-  background-image: -moz-linear-gradient(top, #555555 0%, #111111 100%); /* Mozilla Firefox */
-  background-image: -o-linear-gradient(top, #555555 0%, #111111 100%); /* Opera */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #555555), color-stop(1, #111111)); /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-linear-gradient(top, #555555 0%, #111111 100%); /* Webkit (Chrome 11+) */
-  background-image: linear-gradient(top, #555555 0%, #111111 100%); /* Proposed W3C Markup */
-
-}
-
-.left {
-    display:block;
-    float:left;
-
-}
-
-.middle {
-    display:block;
-    text-align:center;
-
-}
-
-.right {
-    display:block;
-    float:right;
-
-}
-
 #map {
-  height: 500px;
-  z-index: 0;
-
-}
-
-#footer {
   width: 100%;
-  height: 25px;
-  padding: 0px;
-  overflow: hidden;
-  background-image: -ms-linear-gradient(top, #555555 0%, #111111 100%); /* IE10 */
-  background-image: -moz-linear-gradient(top, #555555 0%, #111111 100%); /* Mozilla Firefox */
-  background-image: -o-linear-gradient(top, #555555 0%, #111111 100%); /* Opera */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #555555), color-stop(1, #111111)); /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-linear-gradient(top, #555555 0%, #111111 100%); /* Webkit (Chrome 11+) */
-  background-image: linear-gradient(top, #555555 0%, #111111 100%); /* Proposed W3C Markup */
+  height: 400px;
 
 }
 
-#shadowTop { 
-  position: relative;
-  top: -526px;
-  height: 8px;
-  background: url('/images/shadow-top.png') repeat-x;
-  pointer-events: none;
-
-}
-
-#shadowBottom {
-  position: relative;
-  top: -42px;
-  height: 8px;
-  background: url('/images/shadow-bottom.png') repeat-x;
-  pointer-events: none;
+.runaround {
+  margin: 5px;
 
 }

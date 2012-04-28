@@ -13,7 +13,7 @@ if ( process.argv[2] != null ) {
     setInterval( function() {
             lat += (Math.random() / 1000) + latO;
             lng += (Math.random() / 1000) + lngO;
-            var o = [{"key":key,"points":[{"latitude":lat,"longitude":lng,"altitude":10}]}];
+            var o = [{"key":key,"points":[0,lat,lng,10]}];
             console.log('feed.'+key+' '+JSON.stringify(o));
             client.publish('feed.'+key, JSON.stringify( o ) );
         }, 1000);

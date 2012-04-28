@@ -44,11 +44,11 @@ socket.on('data', function (data) {
       var key = d.key;
       for (var y in d.points) {
         var o = d.points[y];
-        if (o.latitude && o.longitude) {
+        if (rational(o[1]) && rational(o[2]) ) { // o[0] = timeAgo
           var marker = null;
           var polyline = null;
           var info = null;
-          var pos = new google.maps.LatLng(o.latitude, o.longitude);
+          var pos = new google.maps.LatLng(o[1], o[2]);
 
           for (i=0; i<markers.length && marker == null; i++)
             if (markers[i].key == key) {
@@ -115,4 +115,11 @@ function positionUpdate(l){
 
 function positionUpdateFail(e){
   console.log(e.message);
+}
+
+function rational(d){
+  if(d!=null && d>-180 && d<180)
+    return true;
+  else
+    return false;
 }

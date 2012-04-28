@@ -66,13 +66,13 @@ public class ISSPosition extends TimerTask {
 	GeoLocation groundPoint = extSat.getGroundPoint();
 	// feed.ISS [{"key":"ISS","points":[{"latitude":42.362512004571265,"longitude":-71.07954331157089,"altitude":10}]}]
 	StringBuilder sb = new StringBuilder();
-	sb.append("[{\"key\":\"ISS\",\"points\":[{\"latitude\":");
+	sb.append("[{\"key\":\"ISS\",\"points\":[0.0,");
 	sb.append(NF3.format(Math.toDegrees(groundPoint.getLat())));
-	sb.append(",\"longitude\":");
+	sb.append(",");
 	sb.append(NF3.format(Math.toDegrees(groundPoint.getLon())));
-	sb.append(",\"altitude\":");
+	sb.append(",");
 	sb.append(NF0.format(extSat.getAltitude() * 0.001D));
-	sb.append("}]}]");
+	sb.append("]}]");
 	return sb.toString();
     }
 

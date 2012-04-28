@@ -43,7 +43,6 @@ html(lang="en")
             span.icon-bar
             span.icon-bar
             span.icon-bar
-            span.icon-bar
           a.brand(href='/')
             img(src='/images/eyezo-logo.png', width='106', height='35')
           div.nav-collapse
@@ -60,6 +59,13 @@ html(lang="en")
                 a(href='/contact')
                   i.icon-envelope.icon-white
                   |  Contact
+
+  div.container-fluid
+    !=body
+
+  div.navbar.navbar-fixed-bottom
+      div.navbar-inner
+        div.container-fluid
           form.navbar-form.form-inline.pull-right
             input(type='text', placeholder='Email').input-medium.runaround
             input(type='password', placeholder='Password').input-small.runaround
@@ -69,43 +75,10 @@ html(lang="en")
             button(type='submit').btn.btn-primary.runaround
               | Sign in
 
-  div.container-fluid
-    !=body
-
-  div.navbar.navbar-fixed-bottom
-      div.navbar-inner
-        div.container-fluid
-          div.nav-collapse.pull-right
-              ul.nav
-                li.active
-                  a(href='/')
-                    i.icon-home.icon-white
-                    |  Home
-                li
-                  a(href='#about')
-                    i.icon-file.icon-white
-                    |  About
-                li
-                  a(href='#contact')
-                    i.icon-envelope.icon-white
-                    |  Contact
-
   // Le javascript
   script(src='/socket.io/socket.io.js')
   script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
   script(src='/javascripts/eyezo.js')
-  script(src='/javascripts/bootstrap-transition.js')
-  script(src='/javascripts/bootstrap-alert.js')
-  script(src='/javascripts/bootstrap-modal.js')
-  script(src='/javascripts/bootstrap-dropdown.js')
-  script(src='/javascripts/bootstrap-scrollspy.js')
-  script(src='/javascripts/bootstrap-tab.js')
-  script(src='/javascripts/bootstrap-tooltip.js')
-  script(src='/javascripts/bootstrap-popover.js')
-  script(src='/javascripts/bootstrap-button.js')
-  script(src='/javascripts/bootstrap-collapse.js')
-  script(src='/javascripts/bootstrap-carousel.js')
-  script(src='/javascripts/bootstrap-typeahead.js')
   script(type='text/javascript')
     var _gaq=[["_setAccount","UA-74866-11"],["_trackPageview"]];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;

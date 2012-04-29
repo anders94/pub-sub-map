@@ -31,7 +31,7 @@ socket.on('subs', function (data) {
           centerOn = -1;
       });
   for (var x in data) {
-    $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data[x]) ).append(' '+data[x]));
+      $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data[x]) ).append(' '+data[x]+' ').append( $('<a>').attr('onClick','socket.emit("unsub","'+data[x]+'");socket.emit("subs");').append('x')));
     $('input:radio[name=centerOn]').last().change(function(){
             centerOn = $('input:radio[name=centerOn]:checked').val();
         });

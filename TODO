@@ -1,4 +1,1 @@
 - on subscription, pull last hour's worth of history and then subscribe to channel
-- when subscription is something funky (looks to node like a function) node expands it that 
-  way and we cant do a match against it. should throw it away if it doesnt ducktype to string.
-

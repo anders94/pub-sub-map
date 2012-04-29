@@ -59,15 +59,19 @@ io.sockets.on('connection', function (socket) {
 
 	socket.on('sub', function(key) {
 		// enforce alphanumeric keys
-		var rx = new RegExp(/\W/);
-		var a = key.match(rx);
-		if (a == null && key != '') {
-		    if (keys.indexOf(key) < 0) {
-			if (keys.push(key) > limit)
-			    rc.unsubscribe('feed.'+keys.pop());
-			rc.subscribe('feed.'+key);
+		if (typeof key === 'string') {
+		    var rx = new RegExp(/\W/);
+		    var a = key.match(rx);
+		    if (a == null && key != '') {
+			if (keys.indexOf(key) < 0) {
+			    if (keys.push(key) > limit)
+				rc.unsubscribe('feed.'+keys.pop());
+			    rc.subscribe('feed.'+key);
+			}
+			console.log('sub: '+key+' ('+keys.length+' subscriptions: '+keys+')');
 		    }
-		    console.log('sub: '+key+' ('+keys.length+' subscriptions: '+keys+')');
+		    else
+			console.log('ERROR: illegal subscription '+key);
 		}
 		else
 		    console.log('ERROR: illegal subscription '+key);

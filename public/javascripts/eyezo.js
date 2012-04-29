@@ -7,7 +7,7 @@ var markers = new Array();
 var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD', '#4F94CD', '#EE1289', '#B0171F', '#1E1E1E' ];
 var bubble = null;
 var bubbleLoc = null;
-var centerOn = 'none';
+var centerOn = -1;
 
 function resize() {
   var non_map_content_height = header_height + footer_height;
@@ -25,16 +25,19 @@ socket.on('info', function (data) {
 });
 
 socket.on('subs', function (data) {
-  var checked = '';
   $('#centerList li').remove();
-  if (centerOn == 'none')
-    checked = ' checked';
-  $('#centerList').append('<li><input type="radio" name="centerOn" value="none"' + checked + ' /> None</li>');
-  for (var x in data)
-    checked = '';
-    if (centerOn == data[x].key)
-      checked = ' checked';
-    $('#centerList').append('<li><input type="radio" name="centerOn" value="' + data[x] + '"' + checked + ' /> ' + data[x] + '</li>');
+  $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value','none').attr('checked',true)).append(' None'));
+  $('input:radio[name=centerOn]').last().change(function(){
+          centerOn = -1;
+      });
+  for (var x in data) {
+    $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data[x]) ).append(' '+data[x]));
+    $('input:radio[name=centerOn]').last().change(function(){
+            centerOn = $('input:radio[name=centerOn]:checked').val();
+        });
+    if (centerOn == data[x])
+      $('input:radio[name=centerOn]').last().attr('checked',true);
+  }
 });
 
 socket.on('data', function (data) {
@@ -43,12 +46,15 @@ socket.on('data', function (data) {
     if (d.key && d.points) {
       var key = d.key;
       for (var y in d.points) {
-        var o = d.points[y];
-        if (rational(o[1]) && rational(o[2]) ) { // o[0] = timeAgo
+        var p = d.points[y];
+        var timeAgo = p[0];
+        var lat = p[1];
+        var lng = p[2];
+        if (rational(lat) && rational(lng)) {
           var marker = null;
           var polyline = null;
           var info = null;
-          var pos = new google.maps.LatLng(o[1], o[2]);
+          var pos = new google.maps.LatLng(lat, lng);
 
           for (i=0; i<markers.length && marker == null; i++)
             if (markers[i].key == key) {
@@ -57,44 +63,45 @@ socket.on('data', function (data) {
               info = markers[i].info;
             }
 
-            if ( marker == null ) {
-              marker = new google.maps.Marker({
-                map: map,
-                position: pos,
-                clickable: true,
-                animation: google.maps.Animation.DROP
-              });
-
-              var polyOpts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
-              polyline = new google.maps.Polyline(polyOpts);
-              info = new google.maps.InfoWindow();
-
-              var m = new Object( );
-              m.key = key;
-              m.marker = marker;
-              m.polyline = polyline;
-              m.info = info;
-              markers.push(m);
-	      //map.panTo(pos);
-
-            }
-
-            google.maps.event.addListener(marker, 'click', function() {
-                info.open(map, marker);
+          if ( marker == null ) {
+            marker = new google.maps.Marker({
+              map: map,
+              position: pos,
+              clickable: true,
+              animation: google.maps.Animation.DROP
             });
 
-            marker.setPosition(pos);
-            polyline.getPath().push(pos);
-            info.setContent('<h1>'+key+'</h1>'+o.latitude+', '+o.longitude);
-            info.setPosition(pos);
+            var polyOpts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
+            polyline = new google.maps.Polyline(polyOpts);
+            info = new google.maps.InfoWindow();
 
+            var m = new Object( );
+            m.key = key;
+            m.marker = marker;
+            m.polyline = polyline;
+            m.info = info;
+            markers.push(m);
+            //map.panTo(pos);
+
+          }
+
+          google.maps.event.addListener(marker, 'click', function() {
+              info.open(map, marker);
+            });
+
+          marker.setPosition(pos);
+          polyline.getPath().push(pos);
+          info.setContent('<h1>'+key+'</h1>'+lat+', '+lng);
+          info.setPosition(pos);
+
+          for (i=0; i<markers.length; i++)
             if (markers[i].key == centerOn)
-	      map.panTo(marker.getPosition());
-          } // if (o.latitude && o.longitude)
-        } //for (var y in d.points)
-      } // if (d.key && d.points)
-    } // for (var x in data)
-  }); // socket.on
+              map.panTo(markers[i].marker.getPosition());
+        } // if (rational(lat) && rational(lng))
+      } // for (var y in d.points)
+    } // if (d.key && d.points)
+  } // for (var x in data)
+}); // socket.on
 
 function positionUpdate(l){
   bubbleLoc = new google.maps.LatLng(l.coords.latitude, l.coords.longitude);

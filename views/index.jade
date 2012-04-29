@@ -13,18 +13,19 @@ div.row-fluid
       | the International Space Station.
     p
       | The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. It follows 
-      | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular 
+      | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular
       | structure whose first component was launched in 1998. Like many artificial satellites, the station can be 
       | seen from Earth with the naked eye.
     form(name='control')
       input(name='channel')
-      input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value)")
-      input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value)")
-      input(type='button', value='Refresh', onClick="socket.emit('subs')")
+      input(type='button', value='Subscribe', onClick="socket.emit('sub',document.forms[0].channel.value);socket.emit('subs');")
+      input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value);socket.emit('subs');")
+      h4 Center On:
       ul#centerList
     script(type='text/javascript')
       $(function(){
         socket.emit('sub', 'ISS');
+        socket.emit('subs');
       });
       $(document).ready( function(){
         resize();

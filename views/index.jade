@@ -5,6 +5,23 @@ div.row-fluid
       $(window).resize(function() {
         resize();
       });
+      $(function(){
+        socket.emit('sub', 'ISS');
+        socket.emit('subs');
+      });
+      $(document).ready( function(){
+        resize();
+        var opts = {
+          center: new google.maps.LatLng(37.062482, -95.677139),
+          zoom: 4,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map( document.getElementById("map"), opts );
+
+        if (navigator.geolocation != undefined) {
+          navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
+        }
+      });
 
   div.span3
     h1 EyeZo
@@ -22,22 +39,3 @@ div.row-fluid
       input(type='button', value='Unsubscribe', onClick="socket.emit('unsub',document.forms[0].channel.value);socket.emit('subs');")
       h4 Center On:
       ul#centerList
-    script(type='text/javascript')
-      $(function(){
-        socket.emit('sub', 'ISS');
-        socket.emit('subs');
-      });
-      $(document).ready( function(){
-        resize();
-        var opts = {
-          center: new google.maps.LatLng(37.062482, -95.677139),
-          zoom: 4,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map( document.getElementById("map"), opts );
-
-        if (navigator.geolocation != undefined) {
-          navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-          //$('form').append('<input type="button" value="Center map where I am" onClick="if(bubbleLoc!=null){map.panTo(bubbleLoc)}"/>');
-        }
-      });

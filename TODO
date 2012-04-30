@@ -1,2 +1,1 @@
 - on subscription, pull last hour's worth of history and then subscribe to channel
-- subscriotion list rendering shouldn't be in eyezo.js - should be a function that you can add to the sub / unsub routines.

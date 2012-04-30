@@ -31,6 +31,8 @@ socket.on('subs', function (data) {
   if (socket.onEachSub && typeof socket.onEachSub == 'function')
     for (var x in data)
       socket.onEachSub(data[x]);
+  if (socket.onSubsFinished && typeof socket.onSubsFinished == 'function')
+    socket.onSubsFinished();
 });
 
 socket.on('data', function (data) {

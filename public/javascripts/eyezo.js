@@ -20,24 +20,17 @@ function resize() {
 }
 
 var socket = io.connect();
+
 socket.on('info', function (data) {
   alert(data);
 });
 
 socket.on('subs', function (data) {
-  $('#centerList li').remove();
-  $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value','none').attr('checked',true)).append(' None'));
-  $('input:radio[name=centerOn]').last().change(function(){
-          centerOn = -1;
-      });
-  for (var x in data) {
-      $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data[x]) ).append(' '+data[x]+' ').append( $('<a>').attr('href','#').attr('onClick','socket.emit("unsub","'+data[x]+'");socket.emit("subs");').append('x')));
-    $('input:radio[name=centerOn]').last().change(function(){
-            centerOn = $('input:radio[name=centerOn]:checked').val();
-        });
-    if (centerOn == data[x])
-      $('input:radio[name=centerOn]').last().attr('checked',true);
-  }
+  if (socket.onSubs && typeof socket.onSubs == 'function')
+    socket.onSubs();
+  if (socket.onEachSub && typeof socket.onEachSub == 'function')
+    for (var x in data)
+      socket.onEachSub(data[x]);
 });
 
 socket.on('data', function (data) {

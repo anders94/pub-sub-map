@@ -16,10 +16,6 @@ div.row-fluid
         };
         map = new google.maps.Map( document.getElementById("map"), opts );
 
-        if (navigator.geolocation != undefined) {
-          navigator.geolocation.watchPosition(positionUpdate, positionUpdateFail);
-        }
-
         socket.onSubs = function(data){
           $('#centerList li').remove();
           $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value','none').attr('checked',true)).append(' None'));

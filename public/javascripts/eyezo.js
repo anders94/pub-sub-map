@@ -98,27 +98,6 @@ socket.on('data', function (data) {
   } // for (var x in data)
 }); // socket.on
 
-function positionUpdate(l){
-  bubbleLoc = new google.maps.LatLng(l.coords.latitude, l.coords.longitude);
-  if (bubble == null) {
-    bubble = new google.maps.Marker({
-      map: map,
-      position: bubbleLoc,
-      icon:new google.maps.MarkerImage('/images/bubble.png', null, null, 
-                                       new google.maps.Point(9,9), 
-                                       new google.maps.Size(18,18)),
-      clickable: false
-    });
-  }
-  else {
-    bubble.setPosition(bubbleLoc);
-  }
-}
-
-function positionUpdateFail(e){
-  console.log(e.message);
-}
-
 function rational(d){
   if(d!=null && d>-180 && d<180)
     return true;

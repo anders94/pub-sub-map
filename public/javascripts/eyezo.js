@@ -19,24 +19,28 @@ function resize() {
 }
 
 var socket = io.connect();
+socket.event = new Object();
+socket.event.subs = new Object();
+socket.event.data = new Object();
 
 socket.on('info', function (data) {
-  alert(data);
+  if (socket.event.info && typeof socket.event.info == 'function')
+    socket.event.info();
 });
 
 socket.on('subs', function (data) {
-  if (socket.onSubs && typeof socket.onSubs == 'function')
-    socket.onSubs();
-  if (socket.onEachSub && typeof socket.onEachSub == 'function')
+  if (socket.event.subs.begin && typeof socket.event.subs.begin == 'function')
+    socket.event.subs.begin();
+  if (socket.event.subs.each && typeof socket.event.subs.each == 'function')
     for (var x in data)
-      socket.onEachSub(data[x]);
-  if (socket.onSubsFinished && typeof socket.onSubsFinished == 'function')
-    socket.onSubsFinished();
+      socket.event.subs.each(data[x]);
+  if (socket.event.subs.end && typeof socket.event.subs.end == 'function')
+    socket.event.subs.end();
 });
 
 socket.on('data', function (data) {
-  if (socket.onData && typeof socket.onData == 'function')
-    socket.onData();
+  if (socket.event.data.begin && typeof socket.event.data.begin == 'function')
+    socket.event.data.begin();
   for (var x in data) {
     var d = data[x];
     if (d.key && d.points) {
@@ -89,15 +93,15 @@ socket.on('data', function (data) {
           info.setContent('<h1>'+key+'</h1>'+lat+', '+lng);
           info.setPosition(pos);
 
-          if (socket.onEachData && typeof socket.onEachData == 'function')
-	      socket.onEachData(key,marker,polyline,info);
+          if (socket.event.data.each && typeof socket.event.data.each == 'function')
+	      socket.event.data.each(key,marker,polyline,info);
 
         } // if (rational(lat) && rational(lng))
       } // for (var y in d.points)
     } // if (d.key && d.points)
   } // for (var x in data)
-  if (socket.onDataFinished && typeof socket.onDataFinished == 'function')
-    socket.onDataFinished();
+  if (socket.event.data.end && typeof socket.event.data.end == 'function')
+    socket.event.data.end();
 }); // socket.on
 
 function rational(d){

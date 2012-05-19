@@ -18,7 +18,7 @@ div.row-fluid
         };
         map = new google.maps.Map( document.getElementById("map"), opts );
 
-        socket.onSubs = function(data){
+        socket.event.subs.begin = function(data){
           $('#centerList li').remove();
           $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value','none').attr('checked',true)).append(' None'));
           $('input:radio[name=centerOn]').last().change(function(){
@@ -26,7 +26,7 @@ div.row-fluid
           });
         }
 
-        socket.onEachSub = function(data){
+        socket.event.subs.each = function(data){
           $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data) ).append(' '+data+' ').append( $('<a>').attr('href','#').attr('onClick','socket.emit("unsub","'+data+'");socket.emit("subs");').append('x')));
           $('input:radio[name=centerOn]').last().change(function(){
               centerOn = $('input:radio[name=centerOn]:checked').val();
@@ -35,7 +35,7 @@ div.row-fluid
             $('input:radio[name=centerOn]').last().attr('checked',true);
         };
 
-        socket.onEachData = function(key,marker,polyline,info){
+        socket.event.data.each = function(key,marker,polyline,info){
           if (key == centerOn)
             map.panTo(marker.getPosition());
         };

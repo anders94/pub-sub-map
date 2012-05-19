@@ -7,7 +7,6 @@ var markers = new Array();
 var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD', '#4F94CD', '#EE1289', '#B0171F', '#1E1E1E' ];
 var bubble = null;
 var bubbleLoc = null;
-var centerOn = -1;
 
 function resize() {
   var non_map_content_height = header_height + footer_height;
@@ -36,6 +35,8 @@ socket.on('subs', function (data) {
 });
 
 socket.on('data', function (data) {
+  if (socket.onData && typeof socket.onData == 'function')
+    socket.onData();
   for (var x in data) {
     var d = data[x];
     if (d.key && d.points) {
@@ -76,7 +77,6 @@ socket.on('data', function (data) {
             m.polyline = polyline;
             m.info = info;
             markers.push(m);
-            //map.panTo(pos);
 
           }
 
@@ -89,13 +89,15 @@ socket.on('data', function (data) {
           info.setContent('<h1>'+key+'</h1>'+lat+', '+lng);
           info.setPosition(pos);
 
-          for (i=0; i<markers.length; i++)
-            if (markers[i].key == centerOn)
-              map.panTo(markers[i].marker.getPosition());
+          if (socket.onEachData && typeof socket.onEachData == 'function')
+	      socket.onEachData(key,marker,polyline,info);
+
         } // if (rational(lat) && rational(lng))
       } // for (var y in d.points)
     } // if (d.key && d.points)
   } // for (var x in data)
+  if (socket.onDataFinished && typeof socket.onDataFinished == 'function')
+    socket.onDataFinished();
 }); // socket.on
 
 function rational(d){

@@ -4,6 +4,9 @@ div.row-fluid
     script(type='text/javascript')
       $(function(){
         socket.emit('sub', '#{key}');
+        socket.event.data.each = function(key,marker){
+           map.panTo(marker.getPosition());
+        };
       });
       $(window).resize(function() {
         resize();

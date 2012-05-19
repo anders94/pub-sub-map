@@ -2,6 +2,8 @@ div.row-fluid
   div.span9
     div#map.mapBounds
     script(type='text/javascript')
+      var centerOn = -1;
+
       $(window).resize(function() {
         resize();
       });
@@ -33,8 +35,12 @@ div.row-fluid
             $('input:radio[name=centerOn]').last().attr('checked',true);
         };
 
+        socket.onEachData = function(key,marker,polyline,info){
+          if (key == centerOn)
+            map.panTo(marker.getPosition());
+        };
+
         socket.emit('sub', 'ISS');
-	centerOn = 0;
         socket.emit('subs');
 
       });

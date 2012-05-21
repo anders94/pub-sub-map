@@ -1,22 +1,7 @@
-var header_height = 70;
-var footer_height = 58;
-var map_height_min = 350;
-
-var map;
 var markers = new Array();
 var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD', '#4F94CD', '#EE1289', '#B0171F', '#1E1E1E' ];
 var bubble = null;
 var bubbleLoc = null;
-
-function resize() {
-  var non_map_content_height = header_height + footer_height;
-  var map_height = map_height_min;
-  var difference = $(window).height( ) - non_map_content_height;
-  if ( difference > map_height )
-    map_height = difference;
-
-  $("#map").css( 'height', map_height );
-}
 
 var socket = io.connect();
 socket.event = new Object();

@@ -49,9 +49,17 @@ socket.on('data', function (data) {
             }
 
           if ( marker == null ) {
+            var markerImage = new google.maps.MarkerImage(
+              "/images/life-preserver-icon-36x36.png",
+              new google.maps.Size(36, 36),
+              new google.maps.Point(0, 0),
+              new google.maps.Point(9, 9),
+              new google.maps.Size(18, 18)
+	    );
             marker = new google.maps.Marker({
               map: map,
               position: pos,
+              icon: markerImage,
               clickable: true,
               animation: google.maps.Animation.DROP
             });

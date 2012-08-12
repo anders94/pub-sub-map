@@ -20,14 +20,36 @@ div.row-fluid
 
         socket.event.subs.begin = function(data){
           $('#centerList li').remove();
-          $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value','none').attr('checked',true)).append(' None'));
+          $('#centerList')
+            .append( $('<li>')
+              .append( $('<label>')
+                .attr( 'class', 'radio' )
+                .append( $('<input>')
+                  .attr( 'type', 'radio' )
+                  .attr( 'name', 'centerOn' )
+                  .attr( 'value', 'none' )
+                  .attr( 'checked', true ) )
+                .append( ' None' ) ) );
           $('input:radio[name=centerOn]').last().change(function(){
             centerOn = -1;
           });
         }
 
         socket.event.subs.each = function(data){
-          $('#centerList').append( $('<li>').append( $('<input>').attr('type','radio').attr('name','centerOn').attr('value',data) ).append(' '+data+' ').append( $('<a>').attr('href','#').attr('onClick','socket.emit("unsub","'+data+'");socket.emit("subs");').append('x')));
+          $('#centerList')
+            .append( $('<li>')
+              .append( $('<label>')
+                .attr( 'class', 'radio' )
+                .append( $('<input>')
+                  .attr( 'type', 'radio' )
+                  .attr( 'name', 'centerOn' )
+                  .attr( 'value', data ) )
+                .append( ' '+data+' ' )
+                .append( $('<a>')
+                  .attr( 'href', '#' )
+                  .attr( 'onClick', 'socket.emit("unsub","'+data+'");socket.emit("subs");' )
+                  .append( '&times;' )
+                    .attr( 'class', 'btn btn-danger' ) ) ) );
           $('input:radio[name=centerOn]').last().change(function(){
               centerOn = $('input:radio[name=centerOn]:checked').val();
           });
@@ -45,6 +67,13 @@ div.row-fluid
 
       });
 
+      function add( data ) {
+        socket.emit('sub',$('#control input[name=channel]').val());
+        $('#control input[name=channel]').val('');
+        socket.emit('subs');
+
+      }
+
   div.span3
     h1 EyeZo
     p
@@ -55,8 +84,8 @@ div.row-fluid
       | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular
       | structure whose first component was launched in 1998. Like many artificial satellites, the station can be 
       | seen from Earth with the naked eye.
-    form(id='control', onSubmit="socket.emit('sub',$('#control input[name=channel]').val());socket.emit('subs');return(false);")
+    form(id='control', onSubmit="add(); return( false );")
       input(name='channel').input-small
-      input(type='button', value='Add', onClick="socket.emit('sub',$('#control input[name=channel]').val());socket.emit('subs');")
+      input(type='button', value='Add', onClick="add();")
       h4 Center On:
-      ul#centerList
+      ul#centerList.nav.nav-pills.nav-stacked

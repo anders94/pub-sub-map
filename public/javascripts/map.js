@@ -1,12 +1,9 @@
-
-
 window.google = window.google || {};
 google.maps = google.maps || {};
 (function() {
   
   function getScript(src) {
-    document.write('<' + 'script src="' + src + '"' +
-                   ' type="text/javascript"><' + '/script>');
+      document.write('<' + 'script src="/javascripts/mapMain.js"' + ' type="text/javascript"><' + '/script>');
   }
   
   var modules = google.maps.modules = {};

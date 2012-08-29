@@ -34,6 +34,7 @@ html(lang="en")
     link(rel='apple-touch-startup-image', href='/images/splash.png')
 
     script(src='/javascripts/jquery.js')
+    script(src='/javascripts/bootstrap.js')
 
   body
     div.navbar.navbar-fixed-top
@@ -78,7 +79,8 @@ html(lang="en")
 
   // Le javascript
   script(src='/socket.io/socket.io.js')
-  script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
+  // script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
+  script(src='/javascripts/map.js')
   script(src='/javascripts/eyezo.js')
   script(type='text/javascript')
     var _gaq=[["_setAccount","UA-74866-11"],["_trackPageview"]];
@@ -87,7 +89,6 @@ html(lang="en")
     s.parentNode.insertBefore(g,s)}(document,"script"));
 
     var header_height = 70;
-    //var footer_height = 58;
     var footer_height = 15;
     var map_height_min = 350;
 

@@ -30,8 +30,7 @@ div.row-fluid
                     .attr( 'name', 'centerOn' )
                     .attr( 'value', 'none' )
                     .attr( 'checked', true ) )
-                  .append( ' None' ) ) )
-              .append( $('<td>') ) );
+                  .append( ' None' ) ) ) );
 
           $('input:radio[name=centerOn]').last().change(function(){
             centerOn = -1;
@@ -48,13 +47,12 @@ div.row-fluid
                     .attr( 'type', 'radio' )
                     .attr( 'name', 'centerOn' )
                     .attr( 'value', data ) )
-                  .append( ' '+data ) ) )
-              .append( $('<td>')
-                .append( $('<a>')
-                  .attr( 'href', '#' )
-                  .attr( 'onClick', 'socket.emit("unsub","'+data+'");socket.emit("subs");' )
-                  .append( '&times;' )
-                    .attr( 'class', 'btn btn-danger pull-right' ) ) ) );
+                  .append( ' '+data )
+                  .append( $('<a>')
+                    .attr( 'href', '#' )
+                    .attr( 'onClick', 'socket.emit("unsub","'+data+'");socket.emit("subs");' )
+                    .append( '&times;' )
+                      .attr( 'class', 'btn btn-danger pull-right' ) ) ) ) );
 
           $('input:radio[name=centerOn]').last().change(function(){
               centerOn = $('input:radio[name=centerOn]:checked').val();
@@ -81,18 +79,18 @@ div.row-fluid
       }
 
   div.span3
-    h1 EyeZo
-    p
-      | EyeZo lets you track things on maps in realtime. For example, this page lets you see the ground track of
-      | the International Space Station.
-    p
-      | The International Space Station (ISS) is a habitable artificial satellite in low Earth orbit. It follows 
-      | the Salyut, Almaz, Skylab and Mir stations as the ninth space station to be inhabited. The ISS is a modular
-      | structure whose first component was launched in 1998. Like many artificial satellites, the station can be 
-      | seen from Earth with the naked eye.
     form(id='control', onSubmit="add(); return false;")
+      h1 EyeZo
+      p
+        | EyeZo lets you track things on maps in realtime. This page lets you see the ground track of
+        | the International Space Station. (ISS)
+      p
+        | If you know what you want to track, enter it's channel name here:
+
+      div.input-append
+        input(name='channel', placeholder='Channel Name').input-medium
+        button(onClick='add();').btn.add-on Add
+
       h3 Center On
       table.table.table-condensed
         tbody#centerList
-      input(name='channel').input-small
-      input(type='button', value='Add', onClick="add();")

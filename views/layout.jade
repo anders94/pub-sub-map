@@ -18,7 +18,7 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.css')
     style
       body {
-        padding-top: 70px; /* 70px to make the container start at the bottom of the topbar */
+        padding-top: 60px; /* 60px to make the container start at the bottom of the topbar */
       }
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap-responsive.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/application.css')
@@ -37,7 +37,7 @@ html(lang="en")
     script(src='/javascripts/bootstrap.js')
 
   body
-    div.navbar.navbar-fixed-top
+    div.navbar.navbar-fixed-top.navbar-inverse
       div.navbar-inner
         div.container-fluid
           a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
@@ -45,13 +45,13 @@ html(lang="en")
             span.icon-bar
             span.icon-bar
           a.brand(href='/')
-            img(src='/images/eyezo-logo.png', width='106', height='35')
+            img(src='/images/eyezo-logo.png', width='76', height='25')
           div.nav-collapse
             ul.nav
               li.active
                 a(href='/')
                   i.icon-home.icon-white
-                  |  Home
+                  | Home
               li
                 a(href='/about')
                   i.icon-file.icon-white
@@ -60,6 +60,12 @@ html(lang="en")
                 a(href='/contact')
                   i.icon-envelope.icon-white
                   |  Contact
+          //
+            form.navbar-form.form-inline.pull-right
+              input(type='text', placeholder='Email').input-medium
+              input(type='password', placeholder='Password').input-small
+              button(type='submit').btn.btn-primary
+                | Sign in
 
   div.container-fluid
     !=body
@@ -88,7 +94,7 @@ html(lang="en")
     g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
     s.parentNode.insertBefore(g,s)}(document,"script"));
 
-    var header_height = 70;
+    var header_height = 60;
     var footer_height = 15;
     var map_height_min = 350;
 

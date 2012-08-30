@@ -52,7 +52,7 @@ div.row-fluid
                     .attr( 'href', '#' )
                     .attr( 'onClick', 'socket.emit("unsub","'+data+'");socket.emit("subs");' )
                     .append( '&times;' )
-                      .attr( 'class', 'btn btn-danger pull-right' ) ) ) ) );
+                      .attr( 'class', 'close' ) ) ) ) ); //'btn btn-danger pull-right' ) ) ) ) );
 
           $('input:radio[name=centerOn]').last().change(function(){
               centerOn = $('input:radio[name=centerOn]:checked').val();
@@ -89,7 +89,7 @@ div.row-fluid
         | NYCTaxi
 
       div.input-append
-        input(name='channel', placeholder='Channel Name').span6.search-query
+        input(name='channel', placeholder='Channel Name').span9
         button(onClick='add();').btn.btn-primary Add
 
       h3 Center On

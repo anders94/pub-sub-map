@@ -67,21 +67,21 @@ html(lang="en")
               button(type='submit').btn.btn-primary
                 | Sign in
 
-  div.container-fluid
-    !=body
+    div.container-fluid
+      !=body
 
-  //
-    div.navbar.navbar-fixed-bottom
-        div.navbar-inner
-          div.container-fluid
-            form.navbar-form.form-inline.pull-right
-              input(type='text', placeholder='Email').input-medium.runaround
-              input(type='password', placeholder='Password').input-small.runaround
-              label.checkbox.runaround
-                input(type='checkbox')
-                span.help-inline Remember me
-              button(type='submit').btn.btn-primary.runaround
-                | Sign in
+    //
+      div.navbar.navbar-fixed-bottom
+          div.navbar-inner
+            div.container-fluid
+              form.navbar-form.form-inline.pull-right
+                input(type='text', placeholder='Email').input-medium.runaround
+                input(type='password', placeholder='Password').input-small.runaround
+                label.checkbox.runaround
+                  input(type='checkbox')
+                  span.help-inline Remember me
+                button(type='submit').btn.btn-primary.runaround
+                  | Sign in
 
   // Le javascript
   script(src='/socket.io/socket.io.js')

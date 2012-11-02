@@ -28,7 +28,7 @@ Navigate to:
 ```
 http://localhost:8070/
 ```
-(automatically subscribes to 'ISS' - International Space Station)
+(automatically subscribes to 'ISS', the International Space Station)
 
 In another shell, start sending some points for the International Space Station: (requires java)
 ```sh

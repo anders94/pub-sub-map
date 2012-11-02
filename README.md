@@ -1,7 +1,7 @@
 pub-sub-map
 ===========
 
-Publish and subscribe to markers on a Google Map with real-time updating. This is the new engine behind http://eyezo.com/
+Publish and subscribe to markers on a Google Map with real-time updating. This is the new engine behind http://eyezo.com/ currently in development.
 
 Requires
 ----------------
@@ -26,7 +26,7 @@ Navigate to:
 ```
 http://localhost:8070/
 ```
-(automatically subscribes to 'ISS' as in the International Space Station)
+(automatically subscribes to 'ISS' - International Space Station)
 
 In another shell, start sending some points for the International Space Station: (requires java)
 ```sh

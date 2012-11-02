@@ -1,7 +1,9 @@
 pub-sub-map
 ===========
 
-Publish and subscribe to markers on a Google Map with real-time updating. This is the new engine behind http://eyezo.com/ currently in development.
+Publish and subscribe to markers on a Google Map with real-time updating. A large number of web viewers can watch the realtime locations of sets of markers.
+
+This is the new engine behind http://eyezo.com/ currently in development.
 
 Requires
 ----------------

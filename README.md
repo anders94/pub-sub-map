@@ -41,7 +41,7 @@ Click 'ISS' under 'Center On' in the web UI. You should see the approximate grou
 Now, in another shell, start sending some random points for a new location. Let's call it 'joe':
 ```sh
 cd pub-sub-map/generators/
-node send.js joe
+node send joe
 ```
 
 Subscribe to 'joe' in the web UI. You should see a marker drop in around some place in Cambridge, MA and randomly start moving in a northeast direction. Select 'joe' under 'Center On' if you don't see him. You might also want to zoom the map in a little bit because he doesn't move very quickly.

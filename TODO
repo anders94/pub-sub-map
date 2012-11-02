@@ -1,1 +1,2 @@
-- on subscription, pull last hour's worth of history and then subscribe to channel
+- batch up wire protocol to make it more efficient - multiple points in one json wrapper
+- on subscription, pull and show last 25 points

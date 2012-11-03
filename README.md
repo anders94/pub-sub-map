@@ -12,7 +12,7 @@ Requires
 
 Video
 ---------------
-<iframe width="560" height="315" src="http://www.youtube.com/embed/Mn0wQZX0dt8" frameborder="0" allowfullscreen></iframe>
+I have an [demo of pub-sub-map](http://www.youtube.com/embed/Mn0wQZX0dt8) over on YouTube.
 
 Setup
 ---------------

@@ -12,7 +12,7 @@ Requires
 
 Video
 ---------------
-I have an [demo of pub-sub-map](http://www.youtube.com/embed/Mn0wQZX0dt8) over on YouTube.
+I have an [demo of pub-sub-map](http://www.youtube.com/watch?v=Mn0wQZX0dt8) over on YouTube.
 
 Setup
 ---------------

@@ -1,5 +1,4 @@
 var markers = new Array();
-var colors = [ '#CD0000', '#0000CD', '#32CD32', '#FF6103', '#FFA500', '#79CDCD', '#4F94CD', '#EE1289', '#B0171F', '#1E1E1E' ];
 var bubble = null;
 var bubbleLoc = null;
 
@@ -64,7 +63,8 @@ socket.on('data', function (data) {
               animation: google.maps.Animation.DROP
             });
 
-            var polyOpts = {strokeColor:colors[markers.length % colors.length], strokeOpacity:1.0, strokeWeight:2, map:map};
+            var color = "#"+((1<<24)*Math.random()|0).toString(16);
+            var polyOpts = {strokeColor:color, strokeOpacity:1.0, strokeWeight:2, map:map};
             polyline = new google.maps.Polyline(polyOpts);
             info = new google.maps.InfoWindow();
 

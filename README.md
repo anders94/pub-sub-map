@@ -21,6 +21,9 @@ cd pub-sub-map/
 npm install
 ```
 
+Add your Google Maps API key on line 89 of views/layout.jade. Get your key here:
+[https://developers.google.com/maps/documentation/javascript/tutorial#api_key]
+
 Quick Start
 --------------------------------------------------------
 Start the app:

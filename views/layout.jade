@@ -86,12 +86,14 @@ html(lang="en")
   // Le javascript
   script(src='/socket.io/socket.io.js')
   // script(src='http://maps.googleapis.com/maps/api/js?sensor=false')
-  script(src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAroXRhKjnYenCDv858IxoiUw7HEVz8YbY&sensor=false')
   script(src='/javascripts/eyezo.js')
   script(type='text/javascript')
     var header_height = 60;
     var footer_height = 15;
     var map_height_min = 350;
+
+    google.maps.visualRefresh = true;
 
     function resize() {
       var non_map_content_height = header_height + footer_height;

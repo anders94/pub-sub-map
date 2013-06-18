@@ -8,10 +8,10 @@ var webPort = 8070;
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
-var io = require('socket.io');
-var redis = require('redis');
+var express = require('express'),
+    routes = require('./routes'),
+    io = require('socket.io'),
+    redis = require('redis');
 
 var app = module.exports = express.createServer(),
     io = io.listen(app);

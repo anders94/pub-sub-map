@@ -5,14 +5,12 @@ Publish and subscribe to markers on a Google Map with real-time updating. A larg
 
 This is the new engine behind http://eyezo.com/ currently in development.
 
+[![Demo: pub-sub-map](http://img.youtube.com/vi/Mn0wQZX0dt8/0.jpg)](http://www.youtube.com/watch?v=Mn0wQZX0dt8)
+
 Requires
 ----------------
 * node
 * redis
-
-Video
----------------
-I have an [demo of pub-sub-map](http://www.youtube.com/watch?v=Mn0wQZX0dt8) over on YouTube.
 
 Setup
 ---------------

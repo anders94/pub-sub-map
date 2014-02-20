@@ -1,7 +1,7 @@
 div.row-fluid
   div.span9
     div#map.mapBounds
-    script(type='text/javascript')
+    script(type='text/javascript').
       $(function(){
         socket.emit('sub', '#{key}');
         socket.event.data.each = function(key,marker){
